@@ -1,0 +1,27 @@
+{
+  "geocode": {
+    "include_in_all": false,
+    "_all": {
+      "enabled": true,
+      "analyzer": "nGram_analyzer",
+      "search_analyzer": "whitespace_analyzer"
+    },
+    "dynamic_templates": [
+      {
+        "notanalyzed": {
+          "mapping": {
+            "index": "not_analyzed",
+            "type": "string"
+          },
+          "match": "*",
+          "match_mapping_type": "string"
+        }
+      }
+    ],
+    "properties": {
+      "formattedAddress": {
+        "type": "string"
+      }
+    }
+  }
+}

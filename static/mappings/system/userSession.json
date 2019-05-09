@@ -1,0 +1,25 @@
+{
+  "userSession": {
+    "_ttl": {
+      "enabled": true,
+      "default": "24h"
+    },
+    "properties": {
+      "timestamp": {
+        "type": "date"
+      },
+      "token": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "tokenHash": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "user_id": {
+        "type": "string",
+        "index": "not_analyzed"
+      }
+    }
+  }
+}

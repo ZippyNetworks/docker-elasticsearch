@@ -1,0 +1,1575 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "nGram_filter": {
+          "token_chars": [
+            "letter",
+            "digit",
+            "punctuation",
+            "symbol"
+          ],
+          "min_gram": "1",
+          "type": "nGram",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "nGram_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "nGram_filter"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        },
+        "whitespace_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "config": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "allowsCommingling": {
+          "type": "boolean"
+        },
+        "centerPoint": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "connector": {
+          "include_in_all": false,
+          "properties": {
+            "api": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "config": {
+              "include_in_all": false,
+              "properties": {
+                "credentials": {
+                  "include_in_all": false,
+                  "properties": {
+                    "development": {
+                      "include_in_all": false,
+                      "properties": {
+                        "login_url": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "password": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "rets_version": {
+                          "type": "string",
+                          "include_in_all": false
+                        },
+                        "username": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        }
+                      }
+                    },
+                    "production": {
+                      "include_in_all": false,
+                      "properties": {
+                        "login_url": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "password": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "rets_version": {
+                          "type": "string",
+                          "include_in_all": false
+                        },
+                        "username": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        }
+                      }
+                    }
+                  }
+                },
+                "resources": {
+                  "include_in_all": false,
+                  "properties": {
+                    "agent": {
+                      "include_in_all": false,
+                      "properties": {
+                        "class": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "defaultDMQLQuery": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "enabled": {
+                          "type": "boolean"
+                        },
+                        "resource": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "metadata": {
+                          "include_in_all": false,
+                          "properties": {
+                            "entryDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "lastModifiedDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "primaryKey": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "retsSchema": {
+                          "include_in_all": false,
+                          "properties": {
+                            "ClassCount": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "Description": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "KeyField": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ResourceID": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "StandardName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "VisibleName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "classes": {
+                              "include_in_all": false,
+                              "properties": {
+                                "ClassName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "ClassTimeStamp": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagField": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagValue": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "Description": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "HasKeyIndex": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "StandardName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "VisibleName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "_classID": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "media": {
+                      "include_in_all": false,
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean"
+                        },
+                        "enabledLocation": {
+                          "type": "boolean"
+                        },
+                        "objectType": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        }
+                      }
+                    },
+                    "office": {
+                      "include_in_all": false,
+                      "properties": {
+                        "class": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "defaultDMQLQuery": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "enabled": {
+                          "type": "boolean"
+                        },
+                        "resource": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "metadata": {
+                          "include_in_all": false,
+                          "properties": {
+                            "entryDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "lastModifiedDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "primaryKey": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "retsSchema": {
+                          "include_in_all": false,
+                          "properties": {
+                            "ClassCount": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "Description": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "KeyField": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ResourceID": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "StandardName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "VisibleName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "classes": {
+                              "include_in_all": false,
+                              "properties": {
+                                "ClassName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "ClassTimeStamp": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagField": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagValue": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "Description": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "HasKeyIndex": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "StandardName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "VisibleName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "_classID": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "openhome": {
+                      "include_in_all": false,
+                      "properties": {
+                        "class": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "defaultDMQLQuery": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "enabled": {
+                          "type": "boolean"
+                        },
+                        "resource": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "metadata": {
+                          "include_in_all": false,
+                          "properties": {
+                            "entryDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "lastModifiedDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "primaryKey": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "retsSchema": {
+                          "include_in_all": false,
+                          "properties": {
+                            "ClassCount": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "Description": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "KeyField": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ResourceID": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "StandardName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "VisibleName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "classes": {
+                              "include_in_all": false,
+                              "properties": {
+                                "ClassName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "ClassTimeStamp": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagField": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagValue": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "Description": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "HasKeyIndex": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "StandardName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "VisibleName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "_classID": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "property": {
+                      "include_in_all": false,
+                      "properties": {
+                        "class": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "defaultDMQLQuery": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "enabled": {
+                          "type": "boolean"
+                        },
+                        "resource": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "metadata": {
+                          "include_in_all": false,
+                          "properties": {
+                            "entryDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "lastModifiedDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "primaryKey": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "retsSchema": {
+                          "include_in_all": false,
+                          "properties": {
+                            "ClassCount": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "Description": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "KeyField": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ResourceID": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "StandardName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "VisibleName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "classes": {
+                              "include_in_all": false,
+                              "properties": {
+                                "ClassName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "ClassTimeStamp": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagField": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagValue": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "Description": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "HasKeyIndex": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "StandardName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "VisibleName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "_classID": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "tour": {
+                      "include_in_all": false,
+                      "properties": {
+                        "class": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "defaultDMQLQuery": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "enabled": {
+                          "type": "boolean"
+                        },
+                        "resource": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "metadata": {
+                          "include_in_all": false,
+                          "properties": {
+                            "entryDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "lastModifiedDateTime": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            },
+                            "primaryKey": {
+                              "include_in_all": false,
+                              "properties": {
+                                "field": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "retsSchema": {
+                          "include_in_all": false,
+                          "properties": {
+                            "ClassCount": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ClassVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "Description": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "EditMaskVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "KeyField": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "LookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ObjectVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ResourceID": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "SearchHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "StandardName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "UpdateHelpVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExpressionVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationExternalVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupDate": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "ValidationLookupVersion": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "VisibleName": {
+                              "type": "string",
+                              "index": "not_analyzed",
+                              "include_in_all": false
+                            },
+                            "classes": {
+                              "include_in_all": false,
+                              "properties": {
+                                "ClassName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "ClassTimeStamp": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagField": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "DeletedFlagValue": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "Description": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "HasKeyIndex": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "StandardName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "TableVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateDate": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "UpdateVersion": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "VisibleName": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                },
+                                "_classID": {
+                                  "type": "string",
+                                  "index": "not_analyzed",
+                                  "include_in_all": false
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "displayName": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "passwordPolicy": {
+          "include_in_all": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "expiresInDays": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "version": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        }
+      }
+    },
+    "field-schema": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "geocode": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {
+        "formattedAddress": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

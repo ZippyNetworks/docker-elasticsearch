@@ -1,0 +1,250 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "nGram_filter": {
+          "token_chars": [
+            "letter",
+            "digit",
+            "punctuation",
+            "symbol"
+          ],
+          "min_gram": "1",
+          "type": "nGram",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "nGram_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "nGram_filter"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        },
+        "whitespace_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "school": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "_modified": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis",
+          "include_in_all": false
+        },
+        "_path": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "_sid": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "address": {
+          "include_in_all": false,
+          "properties": {
+            "city": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "district": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "districtId": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "districtNCESId": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "fullAddress": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "state": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "contacts": {
+          "include_in_all": false,
+          "properties": {
+            "fax": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "phone": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "website": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "enrollment": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "geo": {
+          "type": "geo_point"
+        },
+        "gradeRange": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "gsId": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "links": {
+          "include_in_all": false,
+          "properties": {
+            "overview": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "ratings": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "reviews": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "schoolStats": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "ncesId": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "rating": {
+          "include_in_all": false,
+          "properties": {
+            "gs": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "parentRating": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "type": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        }
+      }
+    },
+    "request": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "dateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis",
+          "include_in_all": false
+        },
+        "key": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "path": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "requestURI": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "result": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3162 @@
+{
+  "settings": {
+    "index": {
+      "version": {
+        "created": 2010299
+      }
+    },
+    "analysis": {
+      "filter": {
+        "nGram_filter": {
+          "token_chars": [
+            "letter",
+            "digit",
+            "punctuation",
+            "symbol"
+          ],
+          "min_gram": "1",
+          "type": "nGram",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "nGram_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "nGram_filter"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        },
+        "whitespace_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  },
+  "mappings": {
+    ".percolator": {
+      "_all": {
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*title*"
+          }
+        }
+      ],
+      "properties": {
+        "_created": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_listingId": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_modified": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_percolatorType": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_pid": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_userId": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "bbcEmails": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "bccEmails": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "comment": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "emails": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "notification": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "permalink": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "query": {
+          "type": "object",
+          "enabled": false
+        },
+        "requiredStatuses": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "selectedAreas": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "sort": {
+          "properties": {
+            "field": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "order": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "stateParams": {
+          "properties": {
+            "areas": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "maxprice": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "minbath": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "minbed": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "minprice": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "minsqft": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "minyear": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "openAgentSubpanel": {
+              "type": "boolean"
+            },
+            "order": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "pricereduction": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "proptype": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "savedSearch": {
+              "properties": {
+                "saved": {
+                  "properties": {
+                    "squash": {
+                      "type": "boolean"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "searchID": {
+                  "properties": {
+                    "squash": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            },
+            "searchOptions": {
+              "properties": {
+                "visible": {
+                  "properties": {
+                    "squash": {
+                      "type": "boolean"
+                    },
+                    "value": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            },
+            "sidePanel": {
+              "properties": {
+                "subdomainAgentDetails": {
+                  "type": "object"
+                }
+              }
+            },
+            "soldwithindays": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "sort": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "status": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "subdomain": {
+          "type": "boolean"
+        },
+        "tags": {
+          "properties": {
+            "areas": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "beds": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "price": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "pricereduction": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "proptype": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "soldwithindays": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "status": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "listing": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "Coords_Confidence": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "Latitude": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "Longitude": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "_class": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "_created": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis",
+          "include_in_all": false
+        },
+        "_flag": {
+          "include_in_all": false,
+          "properties": {
+            "0": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "_flags": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "_guid": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "_mid": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "_mls": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "_modified": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis",
+          "include_in_all": false
+        },
+        "_normalized": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis",
+          "include_in_all": false
+        },
+        "_pid": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": false
+        },
+        "_system": {
+          "include_in_all": false,
+          "properties": {
+            "mediaFetch": {
+              "include_in_all": false,
+              "properties": {
+                "errors": {
+                  "include_in_all": false,
+                  "properties": {
+                    "limit": {
+                      "type": "long",
+                      "include_in_all": false
+                    },
+                    "page": {
+                      "type": "long",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "success": {
+                  "type": "boolean"
+                },
+                "time": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "total": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "mediaFetched": {
+              "type": "boolean"
+            },
+            "mediaFetchedTime": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            }
+          }
+        },
+        "agents": {
+          "include_in_all": false,
+          "properties": {
+            "listingAgents": {
+              "include_in_all": false,
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_kind": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_modified": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "_pid": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_type": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "address": {
+                  "include_in_all": false,
+                  "properties": {
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "contact": {
+                  "include_in_all": false,
+                  "properties": {
+                    "cell": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "contactPhoneLabel": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "directPhoneExt": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "email": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "fax": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "homePhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "mobilePhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "officePhone": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "phoneExtension": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "phones": {
+                      "include_in_all": false,
+                      "properties": {
+                        "additionalType": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "areaCode": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "phone": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "phoneComplete": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "type": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        }
+                      }
+                    },
+                    "preferred1Phone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "preferred2Phone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "preferred3Phone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "website": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "mailingAddress": {
+                  "include_in_all": false,
+                  "properties": {
+                    "addressStreet2": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "mls": {
+                  "include_in_all": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "licExpirationDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "licNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "licType": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "transferDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "name": {
+                  "include_in_all": false,
+                  "properties": {
+                    "first": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "full": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "last": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "middle": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "office": {
+                  "include_in_all": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "mlsId": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "name": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "number": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "specifics": {
+                  "include_in_all": false,
+                  "properties": {
+                    "agentStatus": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "agentStatusDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "birthDay": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "gender": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "generation": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "lastModifiedDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "memberNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "nrdsNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "title": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "sellingAgents": {
+              "include_in_all": false,
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_kind": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_modified": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "_pid": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_type": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "address": {
+                  "include_in_all": false,
+                  "properties": {
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "contact": {
+                  "include_in_all": false,
+                  "properties": {
+                    "cell": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "contactPhoneLabel": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "directPhoneExt": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "email": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "fax": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "homePhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "mobilePhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "officePhone": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "phoneExtension": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "phones": {
+                      "include_in_all": false,
+                      "properties": {
+                        "additionalType": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "areaCode": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "phone": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "phoneComplete": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "type": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        }
+                      }
+                    },
+                    "preferred1Phone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "preferred2Phone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "preferred3Phone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "website": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "mailingAddress": {
+                  "include_in_all": false,
+                  "properties": {
+                    "addressStreet2": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "mls": {
+                  "include_in_all": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "licExpirationDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "licNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "licType": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "transferDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "name": {
+                  "include_in_all": false,
+                  "properties": {
+                    "first": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "full": {
+                      "type": "string",
+                      "index": "analyzed",
+                      "include_in_all": false
+                    },
+                    "last": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "middle": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "office": {
+                  "include_in_all": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "mlsId": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "name": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "number": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "specifics": {
+                  "include_in_all": false,
+                  "properties": {
+                    "agentStatus": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "agentStatusDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "birthDay": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "gender": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "generation": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "lastModifiedDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis",
+                      "include_in_all": false
+                    },
+                    "memberNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "nrdsNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "title": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "areas": {
+          "include_in_all": false,
+          "properties": {
+            "_id": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "level": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "mlsName": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "name": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "type": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "building": {
+          "include_in_all": false,
+          "properties": {
+            "buildingName": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "mpoBuilding": {
+              "include_in_all": false,
+              "properties": {
+                "_id": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "geo": {
+                  "type": "geo_point"
+                },
+                "images": {
+                  "include_in_all": false,
+                  "properties": {
+                    "content_id": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "content_type": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "location": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "location": {
+                  "include_in_all": false,
+                  "properties": {
+                    "address": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "area": {
+                      "include_in_all": false,
+                      "properties": {
+                        "_id": {
+                          "type": "long",
+                          "include_in_all": false
+                        },
+                        "level": {
+                          "type": "long",
+                          "include_in_all": false
+                        },
+                        "mlsName": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "name": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        },
+                        "type": {
+                          "type": "string",
+                          "index": "not_analyzed",
+                          "include_in_all": false
+                        }
+                      }
+                    },
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zipCode": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "meta": {
+                  "include_in_all": false,
+                  "properties": {
+                    "builderArchitect": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "numUnits": {
+                      "type": "long",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "yearBuilt": {
+                      "type": "long",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "name": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                }
+              }
+            },
+            "numBuildings": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numCommercialUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numFurnishedUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numOneBedUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numRooms": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numStories": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numStudioUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numThreeBedUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numTwoBedUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numUnitsOccupOwner": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numVacantUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "otherUnits": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "percentOffice": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "structure": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "totalUnits": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "construction": {
+          "include_in_all": false,
+          "properties": {
+            "builderArchitect": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "exterior": {
+              "type": "string",
+              "index": "analyzed",
+              "include_in_all": false
+            },
+            "foundation": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "greenPointRating": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "homeEnergyRating": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "remodledGreenCert": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "roof": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "style": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "yearBuilt": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "zoning": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "description": {
+          "include_in_all": false,
+          "properties": {
+            "PhoneToShowNumber": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "agentOnlyRemarks": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "documentsDisclosure": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "homeProtectionPlan": {
+              "type": "boolean"
+            },
+            "imagesModifiedDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "location": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "marketingRemarks": {
+              "type": "string",
+              "index": "analyzed",
+              "include_in_all": false
+            },
+            "miscellaneous": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "numImages": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "phoneToShowAreaCode": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "phoneToShowing": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "possession": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "showingInstructions": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "virtualMedia": {
+              "type": "boolean"
+            },
+            "virtualTourURL": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "events": {
+          "include_in_all": false,
+          "properties": {
+            "openHomes": {
+              "include_in_all": false,
+              "properties": {
+                "comments": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "endDateTime": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "openHouseRID": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "startDateTime": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                }
+              }
+            },
+            "tour": {
+              "include_in_all": false,
+              "properties": {
+                "comments": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "endDateTime": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "firstTimeOnTour": {
+                  "type": "boolean"
+                },
+                "lockboxOnProperty": {
+                  "type": "boolean"
+                },
+                "parking": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "startDateTime": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "tourCanceled": {
+                  "type": "boolean"
+                },
+                "units": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            }
+          }
+        },
+        "geo": {
+          "type": "geo_point"
+        },
+        "images": {
+          "include_in_all": false,
+          "properties": {
+            "content_description": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "content_id": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "content_type": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "length": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "location": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "mime": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "object_id": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "incomeProperty": {
+          "include_in_all": false,
+          "properties": {
+            "PropMgrLastName": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "actualOrScheduled": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "capRate": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "commRentRange": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estGrossIncome": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estManagementExp": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estMiscExp": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estNetIncome": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estTaxesExp": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estTotalAnnExp": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estTotalExpenses": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "estUtilitiesExp": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "existingRentalTerm": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "expensesInclude": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "grossAnnualIncome": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "grsSchedIncIncl": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "incExpSource": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "leaseExpiry": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "leaseTerm": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "leaseTermComments": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "leaseType": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "majorTenantName": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "majorTenantPhone": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "majorTenantSqFt": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "monthlyRent": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "numUnits": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "occName": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "occPhone": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "oneBedRentRange": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "operatingExpenses": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "propManagerPhone": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "rentSource": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "rentType": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "srcOfFinancialInfo": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "studioRentRange": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "subLease": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "subLeaseExpiry": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "tenantPays": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "threeBedRentRange": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "twoBedRentRange": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "typesOfLease": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "units": {
+              "include_in_all": false,
+              "properties": {
+                "approxSqFt": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "identification": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "includes": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "numRooms": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "occLastName": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "occPhone": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "occupancy": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "rentCost": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "unitFour": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "unitOne": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "unitThree": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "unitTwo": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                }
+              }
+            },
+            "vacancyFactor": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "writtenLeaseAvail": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "lot": {
+          "include_in_all": false,
+          "properties": {
+            "apprxLotDimensions": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "conditionsRestrict": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "cornersMarked": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "crops": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "demolitionReport": {
+              "type": "boolean"
+            },
+            "developmentStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "drivewayAndSideWalks": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "existingStructures": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "fencing": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "improvements": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotAreaIncludes": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotDescription": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotDimensionsFront": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotDimensionsLeft": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotDimensionsRear": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotDimensionsRight": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotMeasurement": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "lotSqFt": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "mineralRights": {
+              "type": "boolean"
+            },
+            "numLots": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "otherLotDimensionOne": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "otherLotDimensionTwo": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "otherStructures": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "pool": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "pricePerAcre": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "soilReport": {
+              "type": "boolean"
+            },
+            "surfaceWater": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "surveyed": {
+              "type": "boolean"
+            },
+            "zoningType": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "metrics": {
+          "include_in_all": false,
+          "properties": {
+            "days_until_offer": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "days_until_pending": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "days_until_sold": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "mls": {
+          "include_in_all": false,
+          "properties": {
+            "association": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "availableDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "commissionComments": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "commissionToSellingOffice": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "contingentDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "contingentExpDate": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "courtConfirmation": {
+              "type": "boolean"
+            },
+            "disclaimer": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "entryDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "estSellingDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "exchangeFor": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "financing": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "financingComments": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "inactiveDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "knownBmr": {
+              "type": "boolean"
+            },
+            "knownShortSale": {
+              "type": "boolean"
+            },
+            "listingDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "listingDateTime": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "mlsId": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "mlsNumber": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": true
+            },
+            "modfied": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "modified": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "name": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "nonMemberSalesAgentName": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "nonMemberSalesOfficeName": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "onMarket": {
+              "type": "boolean"
+            },
+            "onMarketDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "onMarketDateTime": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "pendingDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "pendingLitigation": {
+              "type": "boolean"
+            },
+            "permissions": {
+              "include_in_all": false,
+              "properties": {
+                "allowAddressPublic": {
+                  "type": "boolean"
+                },
+                "allowAddressVow": {
+                  "type": "boolean"
+                },
+                "allowVowAvm": {
+                  "type": "boolean"
+                },
+                "allowVowBlog": {
+                  "type": "boolean"
+                },
+                "idx": {
+                  "type": "boolean"
+                },
+                "publishToVow": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "probateSale": {
+              "type": "boolean"
+            },
+            "reciprocalMember": {
+              "include_in_all": false,
+              "properties": {
+                "reciprocalMemberAreaCode": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "reciprocalMemberName": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "reciprocalMemberPhone": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                }
+              }
+            },
+            "reo": {
+              "type": "boolean"
+            },
+            "scopeOfService": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "soldInformation": {
+              "include_in_all": false,
+              "properties": {
+                "financingTerms": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "sellingComments": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "sellingDate": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "sellingPrice": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "spLp": {
+                  "type": "double",
+                  "include_in_all": false
+                }
+              }
+            },
+            "status": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "statusComments": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "statusDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "statusDateTime": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis",
+              "include_in_all": false
+            },
+            "variableRateCommission": {
+              "type": "boolean"
+            },
+            "zeroSellingPrice": {
+              "type": "boolean"
+            }
+          }
+        },
+        "nearby": {
+          "include_in_all": false,
+          "properties": {
+            "dailyTraffic": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "recreation": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "school": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "shopping": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "transportation": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "offices": {
+          "include_in_all": false,
+          "properties": {
+            "listingOffices": {
+              "include_in_all": false,
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_kind": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_modified": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "_pid": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_type": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "address": {
+                  "include_in_all": false,
+                  "properties": {
+                    "careOf": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip4": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "boardID": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "branchType": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "brokerInfo": {
+                  "include_in_all": false,
+                  "properties": {
+                    "brokerAgentId": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "brokerLicenseNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "contactMember": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "designatedBroker": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "numBranches": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "contact": {
+                  "include_in_all": false,
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fax": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "otherPhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "primaryPhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "primaryPhoneExt": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "website": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "idxOpt": {
+                  "type": "boolean"
+                },
+                "mailingAddress": {
+                  "include_in_all": false,
+                  "properties": {
+                    "addressStreet2": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "careOf": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip4": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "mainOfficeId": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "nrdsid": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeActive": {
+                  "type": "boolean"
+                },
+                "officeLongName": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeMLSID": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeName": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeNumber": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeType": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                }
+              }
+            },
+            "sellingOffices": {
+              "include_in_all": false,
+              "properties": {
+                "_id": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_kind": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_modified": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "_pid": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "_type": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "address": {
+                  "include_in_all": false,
+                  "properties": {
+                    "careOf": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip4": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "boardID": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "branchType": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "brokerInfo": {
+                  "include_in_all": false,
+                  "properties": {
+                    "brokerAgentId": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "brokerLicenseNum": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "contactMember": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "designatedBroker": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "numBranches": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "contact": {
+                  "include_in_all": false,
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fax": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "otherPhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "primaryPhone": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "primaryPhoneExt": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "website": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "idxOpt": {
+                  "type": "boolean"
+                },
+                "mailingAddress": {
+                  "include_in_all": false,
+                  "properties": {
+                    "addressStreet2": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "careOf": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "city": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "fullStreetAddress": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "state": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    },
+                    "zip4": {
+                      "type": "string",
+                      "index": "not_analyzed",
+                      "include_in_all": false
+                    }
+                  }
+                },
+                "mainOfficeId": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "nrdsid": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeActive": {
+                  "type": "boolean"
+                },
+                "officeLongName": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeMLSID": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeName": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeNumber": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "officeType": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                }
+              }
+            }
+          }
+        },
+        "parking": {
+          "include_in_all": false,
+          "properties": {
+            "commercialParkingTypes": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "leaseParkingFee": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "monthlyParkingFees": {
+              "type": "boolean"
+            },
+            "monthlyRent": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numIndependentParking": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numParkingSpaces": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "numTandemParking": {
+              "type": "long",
+              "include_in_all": false
+            },
+            "parking": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "parkingAccess": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "parkingFeatures": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "parkingType": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "address": {
+              "include_in_all": false,
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": true
+                },
+                "county": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "crossStreet": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "floorNum": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "mpoAddress": {
+                  "type": "string",
+                  "include_in_all": true,
+                  "fields": {
+                    "mpoAddress": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "raw": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "state": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": true
+                },
+                "streetDirection": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "streetName": {
+                  "type": "string",
+                  "include_in_all": true,
+                  "fields": {
+                    "streetName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "raw": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "streetNum": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": true
+                },
+                "streetNumModifier": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "streetSuffix": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "unitNum": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "zipCode": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": true
+                },
+                "zipCodeLong": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": true
+                }
+              }
+            },
+            "directions": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "hoa": {
+              "include_in_all": false,
+              "properties": {
+                "commonAreas": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "exclusiveUseAreas": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "hoaDues": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "hoaExists": {
+                  "type": "boolean"
+                },
+                "hoaFeeIncludes": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "hoaFeePaid": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "hoaName": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "hoaPhoneNum": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "hours": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "hoursLimited": {
+                  "type": "boolean"
+                },
+                "licenseRequired": {
+                  "type": "boolean"
+                },
+                "restrictions": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "specialDocs": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "ticAgreement": {
+                  "type": "boolean"
+                },
+                "unconfirmedCoopFee": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "interior": {
+              "include_in_all": false,
+              "properties": {
+                "bath": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "bathIncludes": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "bed": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "diningRoom": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "estDiningRoomSize": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "estFamiliyRoomSize": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "estKitchenSize": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "estLivingRoomSize": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "estMasterBedSize": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "familyRoom": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "fireplace": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "floors": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "kitchen": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "laundryAppliances": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "listingPricePerSquareFoot": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "livingRoom": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "lowerLevel": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "mainLevel": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "otherRooms": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "possibleBed": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "pricePerSquareFoot": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "qtrBath": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "sellingPricePerSquareFoot": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "specialFeatures": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "sqFt": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "sqFtSource": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "threeQtrBath": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "totalNumberRooms": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "upperLevel": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                },
+                "views": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "include_in_all": false
+                }
+              }
+            },
+            "isIncomeProperty": {
+              "type": "boolean"
+            },
+            "isMixedUse": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "loftUse": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "mpoNeighborhood": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "mpoPropInfo": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "mpoPropType": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "occType": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "parcelNum": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "price": {
+              "include_in_all": false,
+              "properties": {
+                "listingPrice": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "origPrice": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "priceChangeDate": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis",
+                  "include_in_all": false
+                },
+                "priceReduction": {
+                  "type": "boolean"
+                },
+                "searchPrice": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "propInfo": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "propType": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "region": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "subDistrict": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "systemStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        },
+        "utilities": {
+          "include_in_all": false,
+          "properties": {
+            "energyConservation": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "headingAndCooling": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "seperateMeteres": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "utilites": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            },
+            "waterAndSewer": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

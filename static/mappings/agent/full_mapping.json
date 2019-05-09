@@ -1,0 +1,351 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "nGram_filter": {
+          "token_chars": [
+            "letter",
+            "digit",
+            "punctuation",
+            "symbol"
+          ],
+          "min_gram": "1",
+          "type": "nGram",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "nGram_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "nGram_filter"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        },
+        "whitespace_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "agent": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "_class": {
+          "index": "not_analyzed",
+          "type": "string"
+        },
+        "_created": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_flag": {
+          "properties": {
+            "0": {
+              "type": "string"
+            }
+          }
+        },
+        "_mls": {
+          "index": "not_analyzed",
+          "type": "string"
+        },
+        "_modified": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_normalized": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_suggestPriority": {
+          "type": "long"
+        },
+        "_pid": {
+          "index": "not_analyzed",
+          "type": "string"
+        },
+        "address": {
+          "properties": {
+            "addressStreet": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "city": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "fullStreetAddress": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "state": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "zip": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            }
+          }
+        },
+        "contact": {
+          "properties": {
+            "cell": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "directPhone": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "directPhoneExt": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "email": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "fax": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "homePhone": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred1Ext": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred1Phone": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred2Ext": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred2Phone": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred3Ext": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred3Phone": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred4Ext": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "preferred4Phone": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "voicemail": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "voicemailExt": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "website": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          }
+        },
+        "mailingAddress": {
+          "properties": {
+            "addressStreet": {
+              "type": "string"
+            },
+            "addressStreet2": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "fullStreetAddress": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            }
+          }
+        },
+        "mls": {
+          "properties": {
+            "id": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "isActive": {
+              "type": "boolean"
+            },
+            "licExpirationDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            },
+            "licNum": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "licType": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "realtorBoard": {
+              "type": "string"
+            },
+            "office": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "transferDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            }
+          }
+        },
+        "name": {
+          "properties": {
+            "first": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "full": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "last": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "middle": {
+              "index": "not_analyzed",
+              "type": "string"
+            }
+          }
+        },
+        "specifics": {
+          "properties": {
+            "agentRole": {
+              "type": "string"
+            },
+            "agentStatus": {
+              "type": "string"
+            },
+            "agentStatusDate": {
+              "type": "string"
+            },
+            "agentType": {
+              "type": "string"
+            },
+            "bio": {
+              "type": "string"
+            },
+            "birthDay": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            },
+            "designation": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "generation": {
+              "type": "string"
+            },
+            "languages": {
+              "type": "string"
+            },
+            "lastModifiedDate": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            },
+            "memberNum": {
+              "type": "string"
+            },
+            "nrdsNum": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "specialties": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "zipCodeServed": {
+              "type": "string"
+            }
+          }
+        },
+        "office": {
+          "properties": {
+            "name": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "mlsId": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            },
+            "number": {
+              "index": "not_analyzed",
+              "type": "string",
+              "include_in_all": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

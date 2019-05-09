@@ -1,0 +1,84 @@
+{
+  "dataApiToken": {
+    "dynamic_templates": [
+      {
+        "notanalyzed": {
+          "mapping": {
+            "index": "not_analyzed",
+            "type": "string"
+          },
+          "match": "*",
+          "match_mapping_type": "string"
+        }
+      }
+    ],
+    "properties": {
+
+      "_pid": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+
+      "_token": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+
+      "enabled": {
+        "type": "boolean"
+      },
+
+      "displayName": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+
+      "lastPingDatetime": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      },
+
+      "requestLimits": {
+        "properties": {
+          "period": {
+            "type": "long"
+          },
+          "quota": {
+            "type": "long"
+          },
+          "quotaCounts": {
+            "type": "long"
+          },
+          "expirationdDatetime": {
+            "type": "date",
+            "format": "strict_date_optional_time||epoch_millis"
+          },
+          "querySizeLimit": {
+            "type": "long"
+          },
+          "customQueryEnabled": {
+            "type": "boolean"
+          }
+        }
+      },
+
+      "filters": {
+        "properties": {
+          "user": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "brand": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "status": {
+            "type": "string",
+            "index": "not_analyzed"
+          }
+        }
+      }
+
+    }
+  }
+}

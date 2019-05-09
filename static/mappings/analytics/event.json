@@ -1,0 +1,63 @@
+{
+  "event": {
+    "properties": {
+      "dateTime": {
+        "type": "date",
+        "format": "dateOptionalTime"
+      },
+      "kind": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "listing": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "listingType": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "listingNeighborhood": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "listingAgent": {
+        "properties": {
+          "first": {
+            "type": "string"
+          },
+          "full": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "last": {
+            "type": "string"
+          },
+          "middle": {
+            "type": "string"
+          }
+        }
+      },
+      "sellingAgent": {
+        "properties": {
+          "first": {
+            "type": "string"
+          },
+          "full": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "last": {
+            "type": "string"
+          },
+          "middle": {
+            "type": "string"
+          }
+        }
+      },
+      "sellingPrice": {
+        "type": "long"
+      }
+    }
+  }
+}

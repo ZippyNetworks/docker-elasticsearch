@@ -1,0 +1,1424 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "nGram_filter": {
+          "token_chars": [
+            "letter",
+            "digit",
+            "punctuation",
+            "symbol"
+          ],
+          "min_gram": "1",
+          "type": "nGram",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "nGram_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "nGram_filter"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        },
+        "whitespace_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "sub_neighborhood": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    },
+    "neighborhood": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    },
+    "district": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    },
+    "school": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    },
+    "county": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    },
+    "city": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    },
+    "mls": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    },
+    "zipcode": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "properties": {
+        "_suggestPriority": {
+          "type": "long",
+          "include_in_all": false
+        },
+        "center": {
+          "type": "double",
+          "include_in_all": false
+        },
+        "geometry": {
+          "type": "geo_shape",
+          "tree": "quadtree",
+          "precision": "10.0m"
+        },
+        "properties": {
+          "include_in_all": false,
+          "properties": {
+            "boundary": {
+              "include_in_all": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "description": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "level": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "levelType": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "name": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "census": {
+              "include_in_all": false,
+              "properties": {
+                "areaSqMi": {
+                  "type": "double",
+                  "include_in_all": false
+                },
+                "popSqMi": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "population": {
+                  "type": "long",
+                  "include_in_all": false
+                }
+              }
+            },
+            "images": {
+              "include_in_all": false,
+              "properties": {
+                "content_id": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "content_type": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "location": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "location": {
+              "include_in_all": false,
+              "properties": {
+                "areaCodes": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "countyFips": {
+                  "type": "long",
+                  "include_in_all": false
+                },
+                "state": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "zipCodes": {
+                  "type": "string",
+                  "include_in_all": true
+                }
+              }
+            },
+            "meta": {
+              "include_in_all": false,
+              "properties": {
+                "newsLinks": {
+                  "include_in_all": false,
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "include_in_all": false
+                    },
+                    "url": {
+                      "type": "string",
+                      "include_in_all": false
+                    }
+                  }
+                }
+              }
+            },
+            "mlsName": {
+              "type": "string",
+              "include_in_all": false
+            },
+            "political": {
+              "include_in_all": false,
+              "properties": {
+                "boardOfSupervisors": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateAssembly": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "stateSenate": {
+                  "type": "string",
+                  "include_in_all": false
+                },
+                "usHouse": {
+                  "type": "string",
+                  "include_in_all": false
+                }
+              }
+            },
+            "uniqueID": {
+              "type": "long",
+              "include_in_all": false
+            }
+          }
+        },
+        "title": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "type": {
+          "type": "string",
+          "include_in_all": false
+        },
+        "primary": {
+          "include_in_all": false,
+          "properties": {
+            "mpoStatus": {
+              "type": "string",
+              "index": "not_analyzed",
+              "include_in_all": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

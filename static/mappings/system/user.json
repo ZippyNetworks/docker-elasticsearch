@@ -1,0 +1,267 @@
+{
+  "user": {
+    "dynamic_templates": [
+      {
+        "notanalyzed": {
+          "mapping": {
+            "index": "not_analyzed",
+            "type": "string"
+          },
+          "match": "*",
+          "match_mapping_type": "string"
+        }
+      }
+    ],
+    "properties": {
+      "_created": {
+        "type": "date",
+        "format": "dateOptionalTime"
+      },
+      "_updated": {
+        "type": "date",
+        "format": "dateOptionalTime"
+      },
+      "multiMLS": {
+        "type": "nested"
+      },
+      "activationToken": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "active": {
+        "type": "long"
+      },
+      "biography": {
+        "type": "string"
+      },
+      "bre": {
+        "type": "string"
+      },
+      "dummyUser": {
+        "type": "boolean"
+      },
+      "email": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "firstName": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "hash": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "isAgent": {
+        "type": "boolean"
+      },
+      "lastName": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "mlsData": {
+        "properties": {
+          "BirthDate": {
+            "type": "date",
+            "format": "dateOptionalTime"
+          },
+          "CarrierRouteCode": {
+            "type": "string"
+          },
+          "City": {
+            "type": "string"
+          },
+          "ContactAddlPhoneType1": {
+            "type": "string"
+          },
+          "ContactAddlPhoneType2": {
+            "type": "string"
+          },
+          "ContactAddlPhoneType3": {
+            "type": "string"
+          },
+          "ContactPhoneAreaCode1": {
+            "type": "string"
+          },
+          "ContactPhoneAreaCode2": {
+            "type": "string"
+          },
+          "ContactPhoneAreaCode3": {
+            "type": "string"
+          },
+          "ContactPhoneLabels": {
+            "type": "string"
+          },
+          "ContactPhoneNumber1": {
+            "type": "string"
+          },
+          "ContactPhoneNumber2": {
+            "type": "string"
+          },
+          "ContactPhoneNumber3": {
+            "type": "string"
+          },
+          "ContactPhoneType1": {
+            "type": "string"
+          },
+          "ContactPhoneType2": {
+            "type": "string"
+          },
+          "ContactPhoneType3": {
+            "type": "string"
+          },
+          "County": {
+            "type": "string"
+          },
+          "DesignationDate": {
+            "type": "string"
+          },
+          "Designations": {
+            "type": "string"
+          },
+          "EmailAddress": {
+            "type": "string"
+          },
+          "FirstName": {
+            "type": "string"
+          },
+          "FullName": {
+            "type": "string"
+          },
+          "Gender": {
+            "type": "string"
+          },
+          "Generation": {
+            "type": "string"
+          },
+          "HomePhoneComplete": {
+            "type": "string"
+          },
+          "IsActive": {
+            "type": "string"
+          },
+          "LastModifiedDateTime": {
+            "type": "date",
+            "format": "dateOptionalTime"
+          },
+          "LastName": {
+            "type": "string"
+          },
+          "LicenseExpirationDate": {
+            "type": "date",
+            "format": "dateOptionalTime"
+          },
+          "LicenseNumber": {
+            "type": "string"
+          },
+          "LicenseType": {
+            "type": "string"
+          },
+          "MLSID": {
+            "type": "string"
+          },
+          "MemberNumber": {
+            "type": "string"
+          },
+          "MemberOfficeNumber": {
+            "type": "string"
+          },
+          "MiddleInitial": {
+            "type": "string"
+          },
+          "NRDSID": {
+            "type": "string"
+          },
+          "Nickname": {
+            "type": "string"
+          },
+          "OfficeMLSID": {
+            "type": "string"
+          },
+          "OfficeName": {
+            "type": "string"
+          },
+          "OfficeNumber": {
+            "type": "string"
+          },
+          "PersonalFaxAreaCode": {
+            "type": "string"
+          },
+          "PersonalFaxPhone": {
+            "type": "string"
+          },
+          "PersonalFaxPhoneComplete": {
+            "type": "string"
+          },
+          "PhoneExtension": {
+            "type": "string"
+          },
+          "PhoneMobile": {
+            "type": "string"
+          },
+          "State": {
+            "type": "string"
+          },
+          "StreetAddress": {
+            "type": "string"
+          },
+          "Title": {
+            "type": "string"
+          },
+          "TransferDate": {
+            "type": "date",
+            "format": "dateOptionalTime"
+          },
+          "WebPageAddress": {
+            "type": "string"
+          },
+          "ZipCode": {
+            "type": "string"
+          },
+          "ZipPlus4": {
+            "type": "string"
+          }
+        }
+      },
+      "mlsId": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "mlsSys": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "phoneNumber": {
+        "type": "string"
+      },
+      "resetPasswordToken": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "role": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "subdomain": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "agent": {
+        "type": "object",
+        "properties": {
+          "specifics": {
+            "type": "object",
+            "properties": {
+              "agentStatusDate": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

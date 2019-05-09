@@ -1,0 +1,100 @@
+{
+  "mappings": {
+    "listing": {
+      "include_in_all": false,
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "listingRemoved": {
+      "include_in_all": false,
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "agent": {
+      "include_in_all": false,
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "office": {
+      "include_in_all": false,
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "tour": {
+      "include_in_all": false,
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "openhome": {
+      "include_in_all": false,
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string"
+          }
+        }
+      ],
+      "properties": {}
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "clientSubscription": {
+    "properties": {
+      "owner_id": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "client_id": {
+        "type": "string",
+        "index": "not_analyzed"
+      },
+      "createDateTime": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis",
+        "null_value": "NULL"
+      },
+      "startDateTime": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis",
+        "null_value": "NULL"
+      },
+      "endDateTime": {
+        "type": "date",
+        "format": "strict_date_optional_time||epoch_millis",
+        "null_value": "NULL"
+      },
+      "meta": {
+        "dynamic": true,
+        "properties": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,844 @@
+{
+  "mappings": {
+    "entry": {
+      "properties": {
+        "app": {
+          "type": "string"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "detail": {
+          "properties": {
+            "LastModifiedDateTime": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            },
+            "action": {
+              "type": "string"
+            },
+            "attempt": {
+              "type": "long"
+            },
+            "branch": {
+              "type": "string"
+            },
+            "comment": {
+              "type": "string"
+            },
+            "error": {
+              "properties": {
+                "body": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "connect": {
+                  "type": "boolean"
+                },
+                "detail": {
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "stack": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "error": {
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "message": {
+                  "type": "string"
+                },
+                "msg": {
+                  "type": "string"
+                },
+                "param": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "query": {
+                  "type": "object"
+                },
+                "raw": {
+                  "properties": {
+                    "detail": {
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "stack": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "param": {
+                      "type": "string"
+                    },
+                    "requestId": {
+                      "type": "string"
+                    },
+                    "statusCode": {
+                      "type": "long"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "rawType": {
+                  "type": "string"
+                },
+                "requestId": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                },
+                "stack": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "statusCode": {
+                  "type": "long"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            },
+            "instance": {
+              "type": "string"
+            },
+            "instanceId": {
+              "type": "string"
+            },
+            "job": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "percolatorId": {
+              "type": "string"
+            },
+            "property": {
+              "type": "string"
+            },
+            "queue": {
+              "type": "string"
+            },
+            "queuePayload": {
+              "type": "string"
+            },
+            "routingKey": {
+              "type": "string"
+            },
+            "userId": {
+              "type": "string"
+            }
+          }
+        },
+        "host": {
+          "type": "string"
+        },
+        "time": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        }
+      }
+    },
+    "user": {
+      "properties": {
+        "action": {
+          "type": "string"
+        },
+        "app": {
+          "type": "string"
+        },
+        "detail": {
+          "properties": {
+            "_pid": {
+              "type": "string"
+            },
+            "activationHash": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "ail": {
+              "properties": {
+                "_id": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                }
+              }
+            },
+            "comment": {
+              "type": "string"
+            },
+            "custom_attributes": {
+              "properties": {
+                "installed_ios": {
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "errorMessage": {
+              "type": "string"
+            },
+            "listingId": {
+              "type": "string"
+            },
+            "notification": {
+              "type": "string"
+            },
+            "origin": {
+              "type": "string"
+            },
+            "permalink": {
+              "type": "string"
+            },
+            "referer": {
+              "type": "string"
+            },
+            "stateParams": {
+              "properties": {
+                "areas": {
+                  "type": "string"
+                },
+                "bottomleft": {
+                  "type": "string"
+                },
+                "brokertourdatestart": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis"
+                },
+                "maxprice": {
+                  "type": "string"
+                },
+                "maxsqft": {
+                  "type": "string"
+                },
+                "maxunits": {
+                  "type": "string"
+                },
+                "minbath": {
+                  "type": "string"
+                },
+                "minbed": {
+                  "type": "string"
+                },
+                "minlotsize": {
+                  "type": "string"
+                },
+                "minparkingspaces": {
+                  "type": "string"
+                },
+                "minprice": {
+                  "type": "string"
+                },
+                "minsqft": {
+                  "type": "string"
+                },
+                "minunits": {
+                  "type": "string"
+                },
+                "minyear": {
+                  "type": "string"
+                },
+                "mixeduse": {
+                  "type": "string"
+                },
+                "openhomedateend": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis"
+                },
+                "openhomedatestart": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis"
+                },
+                "order": {
+                  "type": "string"
+                },
+                "pricereduction": {
+                  "type": "string"
+                },
+                "proptype": {
+                  "type": "string"
+                },
+                "senior": {
+                  "type": "string"
+                },
+                "sidePanel": {
+                  "properties": {
+                    "subdomainAgentDetails": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "soldwithindays": {
+                  "type": "string"
+                },
+                "sort": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "topright": {
+                  "type": "string"
+                }
+              }
+            },
+            "subscription": {
+              "properties": {
+                "client_id": {
+                  "type": "string"
+                },
+                "createDateTime": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis"
+                },
+                "endDateTime": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "meta": {
+                  "properties": {
+                    "activationToken": {
+                      "type": "string"
+                    },
+                    "client_email": {
+                      "type": "string"
+                    },
+                    "isInvited": {
+                      "type": "boolean"
+                    },
+                    "subdomain": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "owner_id": {
+                  "type": "string"
+                },
+                "startDateTime": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis"
+                },
+                "status": {
+                  "type": "string"
+                }
+              }
+            },
+            "success": {
+              "type": "boolean"
+            },
+            "tags": {
+              "properties": {
+                "areas": {
+                  "type": "string"
+                },
+                "baths": {
+                  "type": "string"
+                },
+                "beds": {
+                  "type": "string"
+                },
+                "brokertourdaterange": {
+                  "type": "string"
+                },
+                "lotsize": {
+                  "type": "string"
+                },
+                "mixedUse": {
+                  "type": "string"
+                },
+                "numUnits": {
+                  "type": "string"
+                },
+                "openhomedaterange": {
+                  "type": "string"
+                },
+                "parkingspaces": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "pricereduction": {
+                  "type": "string"
+                },
+                "proptype": {
+                  "type": "string"
+                },
+                "senior": {
+                  "type": "string"
+                },
+                "soldwithindays": {
+                  "type": "string"
+                },
+                "sqft": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "yearbuilt": {
+                  "type": "string"
+                }
+              }
+            },
+            "title": {
+              "type": "string"
+            },
+            "updatedFields": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "user-agent": {
+              "type": "string"
+            }
+          }
+        },
+        "host": {
+          "type": "string"
+        },
+        "listing": {
+          "properties": {
+            "_created": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            },
+            "_id": {
+              "type": "string"
+            },
+            "areas": {
+              "properties": {
+                "__id": {
+                  "type": "long"
+                },
+                "_id": {
+                  "type": "long"
+                },
+                "level": {
+                  "type": "long"
+                },
+                "mlsName": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            },
+            "images": {
+              "properties": {
+                "content_description": {
+                  "type": "string"
+                },
+                "content_id": {
+                  "type": "string"
+                },
+                "content_type": {
+                  "type": "string"
+                },
+                "is_preferred": {
+                  "type": "boolean"
+                },
+                "length": {
+                  "type": "long"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "object_id": {
+                  "type": "string"
+                }
+              }
+            },
+            "parking": {
+              "properties": {
+                "numParkingSpaces": {
+                  "type": "long"
+                }
+              }
+            },
+            "primary": {
+              "properties": {
+                "address": {
+                  "properties": {
+                    "city": {
+                      "type": "string"
+                    },
+                    "county": {
+                      "type": "string"
+                    },
+                    "crossStreet": {
+                      "type": "string"
+                    },
+                    "floorNum": {
+                      "type": "long"
+                    },
+                    "mpoAddress": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "streetDirection": {
+                      "type": "string"
+                    },
+                    "streetName": {
+                      "type": "string"
+                    },
+                    "streetNum": {
+                      "type": "string"
+                    },
+                    "streetNumModifier": {
+                      "type": "string"
+                    },
+                    "streetSuffix": {
+                      "type": "string"
+                    },
+                    "unitNum": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "zipCodeLong": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "directions": {
+                  "type": "string"
+                },
+                "hoa": {
+                  "properties": {
+                    "commonAreas": {
+                      "type": "string"
+                    },
+                    "exclusiveUseAreas": {
+                      "type": "string"
+                    },
+                    "hoaDues": {
+                      "type": "long"
+                    },
+                    "hoaExists": {
+                      "type": "boolean"
+                    },
+                    "hoaFeeIncludes": {
+                      "type": "string"
+                    },
+                    "hoaFeePaid": {
+                      "type": "string"
+                    },
+                    "hoaName": {
+                      "type": "string"
+                    },
+                    "hoaPhoneNum": {
+                      "type": "string"
+                    },
+                    "hours": {
+                      "type": "string"
+                    },
+                    "hoursLimited": {
+                      "type": "boolean"
+                    },
+                    "licenseRequired": {
+                      "type": "boolean"
+                    },
+                    "restrictions": {
+                      "type": "string"
+                    },
+                    "specialDocs": {
+                      "type": "string"
+                    },
+                    "ticAgreement": {
+                      "type": "boolean"
+                    },
+                    "unconfirmedCoopFee": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "interior": {
+                  "properties": {
+                    "bath": {
+                      "type": "long"
+                    },
+                    "bathIncludes": {
+                      "type": "string"
+                    },
+                    "bed": {
+                      "type": "long"
+                    },
+                    "diningRoom": {
+                      "type": "string"
+                    },
+                    "estDiningRoomSize": {
+                      "type": "string"
+                    },
+                    "estFamiliyRoomSize": {
+                      "type": "string"
+                    },
+                    "estKitchenSize": {
+                      "type": "string"
+                    },
+                    "estLivingRoomSize": {
+                      "type": "string"
+                    },
+                    "estMasterBedSize": {
+                      "type": "string"
+                    },
+                    "familyRoom": {
+                      "type": "string"
+                    },
+                    "fireplace": {
+                      "type": "string"
+                    },
+                    "floors": {
+                      "type": "string"
+                    },
+                    "kitchen": {
+                      "type": "string"
+                    },
+                    "laundryAppliances": {
+                      "type": "string"
+                    },
+                    "listingPricePerSquareFoot": {
+                      "type": "double"
+                    },
+                    "livingRoom": {
+                      "type": "string"
+                    },
+                    "lowerLevel": {
+                      "type": "string"
+                    },
+                    "mainLevel": {
+                      "type": "string"
+                    },
+                    "otherRooms": {
+                      "type": "string"
+                    },
+                    "possibleBed": {
+                      "type": "long"
+                    },
+                    "pricePerSquareFoot": {
+                      "type": "double"
+                    },
+                    "qtrBath": {
+                      "type": "long"
+                    },
+                    "sellingPricePerSquareFoot": {
+                      "type": "long"
+                    },
+                    "specialFeatures": {
+                      "type": "string"
+                    },
+                    "sqFt": {
+                      "type": "long"
+                    },
+                    "sqFtSource": {
+                      "type": "string"
+                    },
+                    "threeQtrBath": {
+                      "type": "long"
+                    },
+                    "totalNumberRooms": {
+                      "type": "long"
+                    },
+                    "upperLevel": {
+                      "type": "string"
+                    },
+                    "views": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "isIncomeProperty": {
+                  "type": "boolean"
+                },
+                "isMixedUse": {
+                  "type": "string"
+                },
+                "loftUse": {
+                  "type": "string"
+                },
+                "mpoNeighborhood": {
+                  "type": "string"
+                },
+                "mpoPropInfo": {
+                  "type": "string"
+                },
+                "mpoPropType": {
+                  "type": "string"
+                },
+                "mpoStatus": {
+                  "type": "string"
+                },
+                "occType": {
+                  "type": "string"
+                },
+                "parcelNum": {
+                  "type": "string"
+                },
+                "price": {
+                  "properties": {
+                    "listingPrice": {
+                      "type": "long"
+                    },
+                    "origPrice": {
+                      "type": "long"
+                    },
+                    "priceChangeDate": {
+                      "type": "date",
+                      "format": "strict_date_optional_time||epoch_millis"
+                    },
+                    "priceReduction": {
+                      "type": "boolean"
+                    },
+                    "searchPrice": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "propInfo": {
+                  "type": "string"
+                },
+                "propType": {
+                  "type": "string"
+                },
+                "region": {
+                  "type": "string"
+                },
+                "subDistrict": {
+                  "type": "string"
+                },
+                "systemStatus": {
+                  "type": "string"
+                }
+              }
+            },
+            "soldInformation": {
+              "properties": {
+                "financingTerms": {
+                  "type": "string"
+                },
+                "sellingComments": {
+                  "type": "string"
+                },
+                "sellingDate": {
+                  "type": "date",
+                  "format": "strict_date_optional_time||epoch_millis"
+                },
+                "sellingPrice": {
+                  "type": "long"
+                },
+                "spLp": {
+                  "type": "long"
+                }
+              }
+            },
+            "statusDateTime": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            }
+          }
+        },
+        "query": {
+          "properties": {
+            "match": {
+              "properties": {
+                "action": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "time": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "user": {
+          "properties": {
+            "_created": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            },
+            "_mid": {
+              "type": "string"
+            },
+            "_updated": {
+              "type": "date",
+              "format": "strict_date_optional_time||epoch_millis"
+            },
+            "active": {
+              "type": "long"
+            },
+            "email": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "isAgent": {
+              "type": "boolean"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "subdomain": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

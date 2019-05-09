@@ -1,0 +1,6265 @@
+{
+  "mappings": {
+    "tour": {
+      "properties": {
+        "Address": {
+          "type": "string"
+        },
+        "AgentCity": {
+          "type": "string"
+        },
+        "AgentEmailAddress": {
+          "type": "string"
+        },
+        "AgentFirstName": {
+          "type": "string"
+        },
+        "AgentFullName": {
+          "type": "string"
+        },
+        "AgentHomePhone": {
+          "type": "string"
+        },
+        "AgentLastName": {
+          "type": "string"
+        },
+        "AgentMLSID": {
+          "type": "string"
+        },
+        "AgentNRDSID": {
+          "type": "string"
+        },
+        "AgentNumber": {
+          "type": "string"
+        },
+        "AgentPersonalFaxPhone": {
+          "type": "string"
+        },
+        "AgentPhone": {
+          "type": "string"
+        },
+        "AgentState": {
+          "type": "string"
+        },
+        "AgentStreetAddress": {
+          "type": "string"
+        },
+        "AgentWebPageAddress": {
+          "type": "string"
+        },
+        "AgentZipCode": {
+          "type": "string"
+        },
+        "Bathrooms": {
+          "type": "string"
+        },
+        "Bedrooms": {
+          "type": "string"
+        },
+        "Cancelled": {
+          "type": "string"
+        },
+        "ClassPropertyType": {
+          "type": "string"
+        },
+        "Comment": {
+          "type": "string"
+        },
+        "Comments": {
+          "type": "string"
+        },
+        "CrossStreetAddress": {
+          "type": "string"
+        },
+        "Disclaimer": {
+          "type": "string"
+        },
+        "DistrictSubdistrict": {
+          "type": "string"
+        },
+        "EndDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "Hosted": {
+          "type": "string"
+        },
+        "ListingNumberDisplay": {
+          "type": "string"
+        },
+        "ListingPrice": {
+          "type": "string"
+        },
+        "ListingRid": {
+          "type": "string"
+        },
+        "LockBox": {
+          "type": "string"
+        },
+        "MLNumber": {
+          "type": "string"
+        },
+        "MLS": {
+          "type": "string"
+        },
+        "NewRepeat": {
+          "type": "string"
+        },
+        "OfficeEmailAddress": {
+          "type": "string"
+        },
+        "OfficeFaxPhone": {
+          "type": "string"
+        },
+        "OfficeMLSID": {
+          "type": "string"
+        },
+        "OfficeNRDSID": {
+          "type": "string"
+        },
+        "OfficeName": {
+          "type": "string"
+        },
+        "OfficeNumber": {
+          "type": "string"
+        },
+        "OfficePhone": {
+          "type": "string"
+        },
+        "OfficeStreetAddress": {
+          "type": "string"
+        },
+        "OfficeStreetCarrierRouteCode": {
+          "type": "string"
+        },
+        "OfficeStreetCity": {
+          "type": "string"
+        },
+        "OfficeStreetState": {
+          "type": "string"
+        },
+        "OfficeStreetZipCode": {
+          "type": "string"
+        },
+        "OfficeWebPageAddress": {
+          "type": "string"
+        },
+        "Parking": {
+          "type": "string"
+        },
+        "PropertyType": {
+          "type": "string"
+        },
+        "StartDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "TimePeriod": {
+          "type": "string"
+        },
+        "TourDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "TourRid": {
+          "type": "string"
+        },
+        "Units": {
+          "type": "string"
+        },
+        "_class": {
+          "type": "string"
+        },
+        "_mls": {
+          "type": "string"
+        }
+      }
+    },
+    "office": {
+      "properties": {
+        "BillingOffice": {
+          "type": "string"
+        },
+        "BranchType": {
+          "type": "string"
+        },
+        "CorporateLicense": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "FaxAreaCode": {
+          "type": "string"
+        },
+        "FaxPhone": {
+          "type": "string"
+        },
+        "FaxPhoneComplete": {
+          "type": "string"
+        },
+        "IDX": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "string"
+        },
+        "LastModifiedDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MLSID": {
+          "type": "string"
+        },
+        "MO_Char10_1": {
+          "type": "string"
+        },
+        "MO_Char10_2": {
+          "type": "string"
+        },
+        "MO_EMail": {
+          "type": "string"
+        },
+        "MO_HiddenOtyID": {
+          "type": "string"
+        },
+        "MO_OrgAddress2": {
+          "type": "string"
+        },
+        "MO_OrgAddressStreet": {
+          "type": "string"
+        },
+        "MO_OrgCity": {
+          "type": "string"
+        },
+        "MO_OrgState": {
+          "type": "string"
+        },
+        "MO_OrgZip": {
+          "type": "string"
+        },
+        "MO_OrganizationName": {
+          "type": "string"
+        },
+        "MO_PhoneNumber1": {
+          "type": "string"
+        },
+        "MO_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "MO_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "MO_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "MO_ShortName": {
+          "type": "string"
+        },
+        "MO_WebPage": {
+          "type": "string"
+        },
+        "MO_board_id": {
+          "type": "string"
+        },
+        "MailAddress": {
+          "type": "string"
+        },
+        "MailCareOf": {
+          "type": "string"
+        },
+        "MailCarrierRouteCode": {
+          "type": "string"
+        },
+        "MailCity": {
+          "type": "string"
+        },
+        "MailDeliveryPoint": {
+          "type": "string"
+        },
+        "MailState": {
+          "type": "string"
+        },
+        "MailZipCode": {
+          "type": "string"
+        },
+        "MailZipPlus4": {
+          "type": "string"
+        },
+        "MainOfficeMLSID": {
+          "type": "string"
+        },
+        "MainOfficeNumber": {
+          "type": "string"
+        },
+        "NRDSID": {
+          "type": "string"
+        },
+        "NumberOfBranches": {
+          "type": "string"
+        },
+        "O_Affiliate": {
+          "type": "string"
+        },
+        "O_BranchOfOrgID": {
+          "type": "string"
+        },
+        "O_BrokerID": {
+          "type": "string"
+        },
+        "O_BrokerMgmtReports": {
+          "type": "string"
+        },
+        "O_CID": {
+          "type": "string"
+        },
+        "O_Char10_1": {
+          "type": "string"
+        },
+        "O_Char10_2": {
+          "type": "string"
+        },
+        "O_Char50_1": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "O_Contact": {
+          "type": "string"
+        },
+        "O_EMail": {
+          "type": "string"
+        },
+        "O_HiddenOtyID": {
+          "type": "string"
+        },
+        "O_IdxInclude": {
+          "type": "string"
+        },
+        "O_InputDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "O_MailAddress2": {
+          "type": "string"
+        },
+        "O_MailAddressStreet": {
+          "type": "string"
+        },
+        "O_MailCity": {
+          "type": "string"
+        },
+        "O_MailState": {
+          "type": "string"
+        },
+        "O_MailZip": {
+          "type": "string"
+        },
+        "O_MemberOfBoard": {
+          "type": "string"
+        },
+        "O_MemberOfMLS": {
+          "type": "string"
+        },
+        "O_NationalNumber": {
+          "type": "string"
+        },
+        "O_NumberOfActiveBooks": {
+          "type": "string"
+        },
+        "O_NumberOfSoldBooks": {
+          "type": "string"
+        },
+        "O_OfficeID": {
+          "type": "string"
+        },
+        "O_OrgAddress2": {
+          "type": "string"
+        },
+        "O_OrgAddressStreet": {
+          "type": "string"
+        },
+        "O_OrgAllwdCompAccess": {
+          "type": "string"
+        },
+        "O_OrgCity": {
+          "type": "string"
+        },
+        "O_OrgState": {
+          "type": "string"
+        },
+        "O_OrgZip": {
+          "type": "string"
+        },
+        "O_OrganizationName": {
+          "type": "string"
+        },
+        "O_PhoneNumber1": {
+          "type": "string"
+        },
+        "O_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "O_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "O_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "O_PhoneNumber2": {
+          "type": "string"
+        },
+        "O_PhoneNumber2CountryCodeId": {
+          "type": "string"
+        },
+        "O_PhoneNumber2Desc": {
+          "type": "string"
+        },
+        "O_PhoneNumber3": {
+          "type": "string"
+        },
+        "O_PhoneNumber3CountryCodeId": {
+          "type": "string"
+        },
+        "O_PhoneNumber3Desc": {
+          "type": "string"
+        },
+        "O_PrintOnMailingListS": {
+          "type": "string"
+        },
+        "O_ShortName": {
+          "type": "string"
+        },
+        "O_UpdateAgent": {
+          "type": "string"
+        },
+        "O_UpdateDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "O_WebPage": {
+          "type": "string"
+        },
+        "O_board_id": {
+          "type": "string"
+        },
+        "OfficeAreaCode": {
+          "type": "string"
+        },
+        "OfficeContactMember": {
+          "type": "string"
+        },
+        "OfficeLongName": {
+          "type": "string"
+        },
+        "OfficeName": {
+          "type": "string"
+        },
+        "OfficeNumber": {
+          "type": "string"
+        },
+        "OfficePhone": {
+          "type": "string"
+        },
+        "OfficePhoneComplete": {
+          "type": "string"
+        },
+        "OtherAreaCode": {
+          "type": "string"
+        },
+        "OtherPhoneNumber": {
+          "type": "string"
+        },
+        "ResponsibleMember": {
+          "type": "string"
+        },
+        "ResponsibleMemberMLSID": {
+          "type": "string"
+        },
+        "StreetAddress": {
+          "type": "string"
+        },
+        "StreetCareOf": {
+          "type": "string"
+        },
+        "StreetCarrierRouteCode": {
+          "type": "string"
+        },
+        "StreetCity": {
+          "type": "string"
+        },
+        "StreetCounty": {
+          "type": "string"
+        },
+        "StreetState": {
+          "type": "string"
+        },
+        "StreetZipCode": {
+          "type": "string"
+        },
+        "StreetZipPlus4": {
+          "type": "string"
+        },
+        "WebPageAddress": {
+          "type": "string"
+        },
+        "_class": {
+          "type": "string"
+        },
+        "_mls": {
+          "type": "string"
+        }
+      }
+    },
+    "listing": {
+      "properties": {
+        "APN": {
+          "type": "string"
+        },
+        "AccumailResult": {
+          "type": "string"
+        },
+        "Acres": {
+          "type": "string"
+        },
+        "Age": {
+          "type": "string"
+        },
+        "AgentHitCounter": {
+          "type": "string"
+        },
+        "AgentOnlyRemarks": {
+          "type": "string"
+        },
+        "AgreementType": {
+          "type": "string"
+        },
+        "Approved": {
+          "type": "string"
+        },
+        "Area": {
+          "type": "string"
+        },
+        "AreaShortDisplay": {
+          "type": "string"
+        },
+        "Association": {
+          "type": "string"
+        },
+        "AttachedDocs": {
+          "type": "string"
+        },
+        "Auction": {
+          "type": "string"
+        },
+        "AvailableDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "Bathrooms": {
+          "type": "string"
+        },
+        "Bedrooms": {
+          "type": "string"
+        },
+        "BoardLoaded": {
+          "type": "string"
+        },
+        "BrokerTours": {
+          "type": "string"
+        },
+        "CDOM": {
+          "type": "string"
+        },
+        "COMIAEXP": {
+          "type": "string"
+        },
+        "COMIAINT": {
+          "type": "string"
+        },
+        "COMIBLDG": {
+          "type": "string"
+        },
+        "COMIBLDN": {
+          "type": "string"
+        },
+        "COMIBRGR": {
+          "type": "string"
+        },
+        "COMIBUST": {
+          "type": "string"
+        },
+        "COMICAPR": {
+          "type": "string"
+        },
+        "COMICDEV": {
+          "type": "string"
+        },
+        "COMICEIL": {
+          "type": "string"
+        },
+        "COMICLHI": {
+          "type": "string"
+        },
+        "COMICLOS": {
+          "type": "string"
+        },
+        "COMICLRH": {
+          "type": "string"
+        },
+        "COMICONC": {
+          "type": "string"
+        },
+        "COMICOND": {
+          "type": "string"
+        },
+        "COMICONS": {
+          "type": "string"
+        },
+        "COMICRTC": {
+          "type": "string"
+        },
+        "COMICSTP": {
+          "type": "string"
+        },
+        "COMICTTA": {
+          "type": "string"
+        },
+        "COMICTYT": {
+          "type": "string"
+        },
+        "COMICURR": {
+          "type": "string"
+        },
+        "COMIDLYT": {
+          "type": "string"
+        },
+        "COMIDOCK": {
+          "type": "string"
+        },
+        "COMIDOCU": {
+          "type": "string"
+        },
+        "COMIDRAI": {
+          "type": "string"
+        },
+        "COMIEANE": {
+          "type": "string"
+        },
+        "COMIEGRI": {
+          "type": "string"
+        },
+        "COMIEINS": {
+          "type": "string"
+        },
+        "COMIELEV": {
+          "type": "string"
+        },
+        "COMIEMAN": {
+          "type": "string"
+        },
+        "COMIEMCE": {
+          "type": "string"
+        },
+        "COMIEMGF": {
+          "type": "string"
+        },
+        "COMIEMGT": {
+          "type": "string"
+        },
+        "COMIEMIS": {
+          "type": "string"
+        },
+        "COMIENGR": {
+          "type": "string"
+        },
+        "COMIESNI": {
+          "type": "string"
+        },
+        "COMIETAX": {
+          "type": "string"
+        },
+        "COMIETXE": {
+          "type": "string"
+        },
+        "COMIEUTE": {
+          "type": "string"
+        },
+        "COMIEUTL": {
+          "type": "string"
+        },
+        "COMIEXCH": {
+          "type": "string"
+        },
+        "COMIEXPI": {
+          "type": "string"
+        },
+        "COMIEXTR": {
+          "type": "string"
+        },
+        "COMIFINA": {
+          "type": "string"
+        },
+        "COMIFLOR": {
+          "type": "string"
+        },
+        "COMIFLRS": {
+          "type": "string"
+        },
+        "COMIFNCT": {
+          "type": "string"
+        },
+        "COMIFOUN": {
+          "type": "string"
+        },
+        "COMIGRBW": {
+          "type": "string"
+        },
+        "COMIGRII": {
+          "type": "string"
+        },
+        "COMIGRM": {
+          "type": "string"
+        },
+        "COMIGROI": {
+          "type": "string"
+        },
+        "COMIGRRT": {
+          "type": "string"
+        },
+        "COMIGRSI": {
+          "type": "string"
+        },
+        "COMIHGTL": {
+          "type": "string"
+        },
+        "COMIHTCL": {
+          "type": "string"
+        },
+        "COMIHTCO": {
+          "type": "string"
+        },
+        "COMIINSQ": {
+          "type": "string"
+        },
+        "COMILBLO": {
+          "type": "string"
+        },
+        "COMILDES": {
+          "type": "string"
+        },
+        "COMILDFC": {
+          "type": "string"
+        },
+        "COMILEAI": {
+          "type": "string"
+        },
+        "COMILEAS": {
+          "type": "string"
+        },
+        "COMILESD": {
+          "type": "string"
+        },
+        "COMILESI": {
+          "type": "string"
+        },
+        "COMILESO": {
+          "type": "string"
+        },
+        "COMILESP": {
+          "type": "string"
+        },
+        "COMILOAD": {
+          "type": "string"
+        },
+        "COMILOAF": {
+          "type": "string"
+        },
+        "COMILOCA": {
+          "type": "string"
+        },
+        "COMILOTD": {
+          "type": "string"
+        },
+        "COMILSTM": {
+          "type": "string"
+        },
+        "COMILSTP": {
+          "type": "string"
+        },
+        "COMILTDS": {
+          "type": "string"
+        },
+        "COMIMAXL": {
+          "type": "string"
+        },
+        "COMIMEXP": {
+          "type": "string"
+        },
+        "COMIMINC": {
+          "type": "string"
+        },
+        "COMIMINL": {
+          "type": "string"
+        },
+        "COMIMISC": {
+          "type": "string"
+        },
+        "COMIMNSQ": {
+          "type": "string"
+        },
+        "COMIMTNM": {
+          "type": "string"
+        },
+        "COMIMTPH": {
+          "type": "string"
+        },
+        "COMIMTSF": {
+          "type": "string"
+        },
+        "COMINELV": {
+          "type": "string"
+        },
+        "COMINEWC": {
+          "type": "string"
+        },
+        "COMINFLR": {
+          "type": "string"
+        },
+        "COMININC": {
+          "type": "string"
+        },
+        "COMINNN": {
+          "type": "string"
+        },
+        "COMINOBL": {
+          "type": "string"
+        },
+        "COMINOFL": {
+          "type": "string"
+        },
+        "COMINOOF": {
+          "type": "string"
+        },
+        "COMINORE": {
+          "type": "string"
+        },
+        "COMINOTN": {
+          "type": "string"
+        },
+        "COMINPRK": {
+          "type": "string"
+        },
+        "COMINTKD": {
+          "type": "string"
+        },
+        "COMINTRT": {
+          "type": "string"
+        },
+        "COMINUNT": {
+          "type": "string"
+        },
+        "COMIOCCN": {
+          "type": "string"
+        },
+        "COMIOFSQ": {
+          "type": "string"
+        },
+        "COMIONMK": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "COMIOWBS": {
+          "type": "string"
+        },
+        "COMIOWNN": {
+          "type": "string"
+        },
+        "COMIOWNP": {
+          "type": "string"
+        },
+        "COMIPARK": {
+          "type": "string"
+        },
+        "COMIPCTO": {
+          "type": "string"
+        },
+        "COMIPERO": {
+          "type": "string"
+        },
+        "COMIPHON": {
+          "type": "string"
+        },
+        "COMIPKGR": {
+          "type": "string"
+        },
+        "COMIPLAN": {
+          "type": "string"
+        },
+        "COMIPMCO": {
+          "type": "string"
+        },
+        "COMIPMLN": {
+          "type": "string"
+        },
+        "COMIPMPH": {
+          "type": "string"
+        },
+        "COMIPOSS": {
+          "type": "string"
+        },
+        "COMIPRBS": {
+          "type": "string"
+        },
+        "COMIPROB": {
+          "type": "string"
+        },
+        "COMIRETA": {
+          "type": "string"
+        },
+        "COMIRNTA": {
+          "type": "string"
+        },
+        "COMIROAD": {
+          "type": "string"
+        },
+        "COMIROOF": {
+          "type": "string"
+        },
+        "COMISAFE": {
+          "type": "string"
+        },
+        "COMISALE": {
+          "type": "string"
+        },
+        "COMISBJC": {
+          "type": "string"
+        },
+        "COMISCOP": {
+          "type": "string"
+        },
+        "COMISEEB": {
+          "type": "string"
+        },
+        "COMISEWS": {
+          "type": "string"
+        },
+        "COMISFIN": {
+          "type": "string"
+        },
+        "COMISHOW": {
+          "type": "string"
+        },
+        "COMISIGN": {
+          "type": "string"
+        },
+        "COMISOUR": {
+          "type": "string"
+        },
+        "COMISPEC": {
+          "type": "string"
+        },
+        "COMISPET": {
+          "type": "string"
+        },
+        "COMISPEZ": {
+          "type": "string"
+        },
+        "COMISTNT": {
+          "type": "string"
+        },
+        "COMISTOR": {
+          "type": "string"
+        },
+        "COMISTRC": {
+          "type": "string"
+        },
+        "COMISTRU": {
+          "type": "string"
+        },
+        "COMITAGT": {
+          "type": "string"
+        },
+        "COMITICC": {
+          "type": "string"
+        },
+        "COMITLEI": {
+          "type": "string"
+        },
+        "COMITNAL": {
+          "type": "string"
+        },
+        "COMITNFX": {
+          "type": "string"
+        },
+        "COMITNSQ": {
+          "type": "string"
+        },
+        "COMITYPL": {
+          "type": "string"
+        },
+        "COMIUBLT": {
+          "type": "string"
+        },
+        "COMIUNCF": {
+          "type": "string"
+        },
+        "COMIUNIT": {
+          "type": "string"
+        },
+        "COMIUSE": {
+          "type": "string"
+        },
+        "COMIUTIL": {
+          "type": "string"
+        },
+        "COMIVACF": {
+          "type": "string"
+        },
+        "COMIVCYF": {
+          "type": "string"
+        },
+        "COMIWALL": {
+          "type": "string"
+        },
+        "COMIWRSQ": {
+          "type": "string"
+        },
+        "COMIWTRS": {
+          "type": "string"
+        },
+        "COMIYEAR": {
+          "type": "string"
+        },
+        "COMIYRGR": {
+          "type": "string"
+        },
+        "COMIZONE": {
+          "type": "string"
+        },
+        "COMIZONG": {
+          "type": "string"
+        },
+        "CONDBLDR": {
+          "type": "string"
+        },
+        "CONDBRGC": {
+          "type": "string"
+        },
+        "CONDBTHI": {
+          "type": "string"
+        },
+        "CONDCMNA": {
+          "type": "string"
+        },
+        "CONDCONS": {
+          "type": "string"
+        },
+        "CONDDNGR": {
+          "type": "string"
+        },
+        "CONDDOCU": {
+          "type": "string"
+        },
+        "CONDDRVW": {
+          "type": "string"
+        },
+        "CONDEDRS": {
+          "type": "string"
+        },
+        "CONDEFMS": {
+          "type": "string"
+        },
+        "CONDEKTS": {
+          "type": "string"
+        },
+        "CONDELVS": {
+          "type": "string"
+        },
+        "CONDEMBS": {
+          "type": "string"
+        },
+        "CONDENGY": {
+          "type": "string"
+        },
+        "CONDEXCU": {
+          "type": "string"
+        },
+        "CONDEXTR": {
+          "type": "string"
+        },
+        "CONDFAMR": {
+          "type": "string"
+        },
+        "CONDFLOR": {
+          "type": "string"
+        },
+        "CONDFLRN": {
+          "type": "string"
+        },
+        "CONDFNCT": {
+          "type": "string"
+        },
+        "CONDFOUN": {
+          "type": "string"
+        },
+        "CONDFRPL": {
+          "type": "string"
+        },
+        "CONDGPRT": {
+          "type": "string"
+        },
+        "CONDHMPR": {
+          "type": "string"
+        },
+        "CONDHOA": {
+          "type": "string"
+        },
+        "CONDHOAD": {
+          "type": "string"
+        },
+        "CONDHOAI": {
+          "type": "string"
+        },
+        "CONDHOAN": {
+          "type": "string"
+        },
+        "CONDHOAP": {
+          "type": "string"
+        },
+        "CONDHOLI": {
+          "type": "string"
+        },
+        "CONDHOUR": {
+          "type": "string"
+        },
+        "CONDHRID": {
+          "type": "string"
+        },
+        "CONDHTCL": {
+          "type": "string"
+        },
+        "CONDKBMR": {
+          "type": "string"
+        },
+        "CONDKSHS": {
+          "type": "string"
+        },
+        "CONDKTCH": {
+          "type": "string"
+        },
+        "CONDLETC": {
+          "type": "string"
+        },
+        "CONDLETE": {
+          "type": "string"
+        },
+        "CONDLEXD": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "CONDLLVL": {
+          "type": "string"
+        },
+        "CONDLNDA": {
+          "type": "string"
+        },
+        "CONDLVGR": {
+          "type": "string"
+        },
+        "CONDMFYN": {
+          "type": "string"
+        },
+        "CONDMLVL": {
+          "type": "string"
+        },
+        "CONDMOPF": {
+          "type": "string"
+        },
+        "CONDMTHR": {
+          "type": "string"
+        },
+        "CONDNPRK": {
+          "type": "string"
+        },
+        "CONDNRMS": {
+          "type": "string"
+        },
+        "CONDNUNT": {
+          "type": "string"
+        },
+        "CONDOCUP": {
+          "type": "string"
+        },
+        "CONDORMS": {
+          "type": "string"
+        },
+        "CONDPAAC": {
+          "type": "string"
+        },
+        "CONDPAFE": {
+          "type": "string"
+        },
+        "CONDPAID": {
+          "type": "string"
+        },
+        "CONDPATY": {
+          "type": "string"
+        },
+        "CONDPNDL": {
+          "type": "string"
+        },
+        "CONDPOOL": {
+          "type": "string"
+        },
+        "CONDPOSS": {
+          "type": "string"
+        },
+        "CONDPRBS": {
+          "type": "string"
+        },
+        "CONDPRKG": {
+          "type": "string"
+        },
+        "CONDREOO": {
+          "type": "string"
+        },
+        "CONDREST": {
+          "type": "string"
+        },
+        "CONDRNTP": {
+          "type": "string"
+        },
+        "CONDRNTS": {
+          "type": "string"
+        },
+        "CONDROOF": {
+          "type": "string"
+        },
+        "CONDRSTC": {
+          "type": "string"
+        },
+        "CONDSBJC": {
+          "type": "string"
+        },
+        "CONDSCOP": {
+          "type": "string"
+        },
+        "CONDSHOP": {
+          "type": "string"
+        },
+        "CONDSHOW": {
+          "type": "string"
+        },
+        "CONDSPCD": {
+          "type": "string"
+        },
+        "CONDSPCF": {
+          "type": "string"
+        },
+        "CONDSTYL": {
+          "type": "string"
+        },
+        "CONDTICA": {
+          "type": "string"
+        },
+        "CONDTRNS": {
+          "type": "string"
+        },
+        "CONDTYPE": {
+          "type": "string"
+        },
+        "CONDULVL": {
+          "type": "string"
+        },
+        "CONDUNCF": {
+          "type": "string"
+        },
+        "CONDUSE": {
+          "type": "string"
+        },
+        "CONDVIEW": {
+          "type": "string"
+        },
+        "CONDWLAV": {
+          "type": "string"
+        },
+        "CONDZONG": {
+          "type": "string"
+        },
+        "Caravans": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "CommComments": {
+          "type": "string"
+        },
+        "Commission1": {
+          "type": "string"
+        },
+        "ContingentDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "ContingentExpirationDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "Coords_Confidence": {
+          "type": "double"
+        },
+        "County": {
+          "type": "string"
+        },
+        "CrossStreetAddress": {
+          "type": "string"
+        },
+        "DOM": {
+          "type": "string"
+        },
+        "Directions": {
+          "type": "string"
+        },
+        "EnteredByMLSID": {
+          "type": "string"
+        },
+        "EntryDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "EstimatedSellingDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "FIPSCode": {
+          "type": "string"
+        },
+        "Financing": {
+          "type": "string"
+        },
+        "FinancingComments": {
+          "type": "string"
+        },
+        "FullBathrooms": {
+          "type": "string"
+        },
+        "GarageSpaces": {
+          "type": "string"
+        },
+        "GeoCodeResult": {
+          "type": "string"
+        },
+        "HalfBathrooms": {
+          "type": "string"
+        },
+        "HitCounter": {
+          "type": "string"
+        },
+        "InactiveDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "LA1_Address2": {
+          "type": "string"
+        },
+        "LA1_AddressStreet": {
+          "type": "string"
+        },
+        "LA1_AgentID": {
+          "type": "string"
+        },
+        "LA1_AgentLicenseID": {
+          "type": "string"
+        },
+        "LA1_Char100_1": {
+          "type": "string"
+        },
+        "LA1_Char10_1": {
+          "type": "string"
+        },
+        "LA1_Char10_2": {
+          "type": "string"
+        },
+        "LA1_Char10_3": {
+          "type": "string"
+        },
+        "LA1_City": {
+          "type": "string"
+        },
+        "LA1_Email": {
+          "type": "string"
+        },
+        "LA1_HiddenUsCID": {
+          "type": "string"
+        },
+        "LA1_LoginName": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber1": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber2": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber2CountryCodeId": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber2Desc": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber2Ext": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber3": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber3CountryCodeId": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber3Desc": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber3Ext": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber4": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber4CountryCodeId": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber4Desc": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber5": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber5CountryCodeId": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber5Desc": {
+          "type": "string"
+        },
+        "LA1_PhoneNumber5Ext": {
+          "type": "string"
+        },
+        "LA1_State": {
+          "type": "string"
+        },
+        "LA1_Status": {
+          "type": "string"
+        },
+        "LA1_UserFirstName": {
+          "type": "string"
+        },
+        "LA1_UserLastName": {
+          "type": "string"
+        },
+        "LA1_UserMI": {
+          "type": "string"
+        },
+        "LA1_WebPage": {
+          "type": "string"
+        },
+        "LA1_Zip": {
+          "type": "string"
+        },
+        "LA1_users_nrds_id": {
+          "type": "string"
+        },
+        "LA2_Address2": {
+          "type": "string"
+        },
+        "LA2_AddressStreet": {
+          "type": "string"
+        },
+        "LA2_AgentLicenseID": {
+          "type": "string"
+        },
+        "LA2_Char100_1": {
+          "type": "string"
+        },
+        "LA2_Char10_1": {
+          "type": "string"
+        },
+        "LA2_Char10_2": {
+          "type": "string"
+        },
+        "LA2_Char10_3": {
+          "type": "string"
+        },
+        "LA2_City": {
+          "type": "string"
+        },
+        "LA2_Email": {
+          "type": "string"
+        },
+        "LA2_HiddenUsCID": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber1": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber2": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber2CountryCodeId": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber2Desc": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber2Ext": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber3": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber3CountryCodeId": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber3Desc": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber3Ext": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber4": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber4CountryCodeId": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber4Desc": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber5": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber5CountryCodeId": {
+          "type": "string"
+        },
+        "LA2_PhoneNumber5Desc": {
+          "type": "string"
+        },
+        "LA2_State": {
+          "type": "string"
+        },
+        "LA2_Status": {
+          "type": "string"
+        },
+        "LA2_UserFirstName": {
+          "type": "string"
+        },
+        "LA2_UserLastName": {
+          "type": "string"
+        },
+        "LA2_UserMI": {
+          "type": "string"
+        },
+        "LA2_WebPage": {
+          "type": "string"
+        },
+        "LA2_Zip": {
+          "type": "string"
+        },
+        "LA2_users_nrds_id": {
+          "type": "string"
+        },
+        "LFD_ADDTLFEATURESMISC_158": {
+          "type": "string"
+        },
+        "LFD_ADDTLMISCFEATURES_90": {
+          "type": "string"
+        },
+        "LFD_ALLUNITSHAVE_159": {
+          "type": "string"
+        },
+        "LFD_ALLUNITSHAVE_91": {
+          "type": "string"
+        },
+        "LFD_BASEMENT_160": {
+          "type": "string"
+        },
+        "LFD_BASEMENT_92": {
+          "type": "string"
+        },
+        "LFD_BATHMASTERINCLUDES_3": {
+          "type": "string"
+        },
+        "LFD_BATHNONMSTRINCLUDE_4": {
+          "type": "string"
+        },
+        "LFD_CEILINGHEIGHT_208": {
+          "type": "string"
+        },
+        "LFD_COMMERCIALTYPE_210": {
+          "type": "string"
+        },
+        "LFD_CONSTRUCTIONSTATUS_6": {
+          "type": "string"
+        },
+        "LFD_COOLING_161": {
+          "type": "string"
+        },
+        "LFD_COOLING_209": {
+          "type": "string"
+        },
+        "LFD_COOLING_5": {
+          "type": "string"
+        },
+        "LFD_COOLING_93": {
+          "type": "string"
+        },
+        "LFD_DEVELOPMENTSTATUS_41": {
+          "type": "string"
+        },
+        "LFD_DEVELOPMNTSTATUS_255": {
+          "type": "string"
+        },
+        "LFD_DISABLEDFEATURES_162": {
+          "type": "string"
+        },
+        "LFD_DISABLEDFEATURES_7": {
+          "type": "string"
+        },
+        "LFD_DISABLEDFEATURES_94": {
+          "type": "string"
+        },
+        "LFD_DISCLOSURESZONES_211": {
+          "type": "string"
+        },
+        "LFD_DISCLOSURES_163": {
+          "type": "string"
+        },
+        "LFD_DISCLOSURES_256": {
+          "type": "string"
+        },
+        "LFD_DISCLOSURES_42": {
+          "type": "string"
+        },
+        "LFD_DISCLOSURES_8": {
+          "type": "string"
+        },
+        "LFD_DISCLOSURES_95": {
+          "type": "string"
+        },
+        "LFD_EQUIPMENTADDITIONAL_164": {
+          "type": "string"
+        },
+        "LFD_EQUIPMENTADDITIONAL_9": {
+          "type": "string"
+        },
+        "LFD_EQUIPMENTADDITIONAL_96": {
+          "type": "string"
+        },
+        "LFD_EXISTINGLEASETERMS_97": {
+          "type": "string"
+        },
+        "LFD_EXISTINGLOAN_212": {
+          "type": "string"
+        },
+        "LFD_EXISTINGLOAN_257": {
+          "type": "string"
+        },
+        "LFD_EXISTINGLOAN_271": {
+          "type": "string"
+        },
+        "LFD_EXTERIOR_10": {
+          "type": "string"
+        },
+        "LFD_EXTERIOR_166": {
+          "type": "string"
+        },
+        "LFD_EXTERIOR_214": {
+          "type": "string"
+        },
+        "LFD_EXTERIOR_98": {
+          "type": "string"
+        },
+        "LFD_FINANCIALDATASOURCE_167": {
+          "type": "string"
+        },
+        "LFD_FINANCIALDATASOURCE_215": {
+          "type": "string"
+        },
+        "LFD_FINANCIALDATASOURCE_99": {
+          "type": "string"
+        },
+        "LFD_FIREPLACES_11": {
+          "type": "string"
+        },
+        "LFD_FLOORING_100": {
+          "type": "string"
+        },
+        "LFD_FLOORING_12": {
+          "type": "string"
+        },
+        "LFD_FLOORING_168": {
+          "type": "string"
+        },
+        "LFD_FLOORS_216": {
+          "type": "string"
+        },
+        "LFD_FOUNDATION_13": {
+          "type": "string"
+        },
+        "LFD_GARAGEPARKING_14": {
+          "type": "string"
+        },
+        "LFD_GARAGEPARKING_217": {
+          "type": "string"
+        },
+        "LFD_HEATING_101": {
+          "type": "string"
+        },
+        "LFD_HEATING_15": {
+          "type": "string"
+        },
+        "LFD_HEATING_169": {
+          "type": "string"
+        },
+        "LFD_HEATING_218": {
+          "type": "string"
+        },
+        "LFD_HOAAMENITIES_1": {
+          "type": "string"
+        },
+        "LFD_HOAAMENITIES_39": {
+          "type": "string"
+        },
+        "LFD_HOADOCUMENTS_17": {
+          "type": "string"
+        },
+        "LFD_HOADOCUMENTS_44": {
+          "type": "string"
+        },
+        "LFD_HOAFEESINCLUDE_2": {
+          "type": "string"
+        },
+        "LFD_HOAFEESINCLUDE_40": {
+          "type": "string"
+        },
+        "LFD_HOATRANSFERFEES_16": {
+          "type": "string"
+        },
+        "LFD_HOATRANSFERFEES_43": {
+          "type": "string"
+        },
+        "LFD_INSPECTIONREPORTSAVAIL_170": {
+          "type": "string"
+        },
+        "LFD_INSPECTIONREPORTS_258": {
+          "type": "string"
+        },
+        "LFD_INSPECTIONSREPORTS_102": {
+          "type": "string"
+        },
+        "LFD_INSPECTIONSREPORTS_18": {
+          "type": "string"
+        },
+        "LFD_INSPECTIONSREPORTS_45": {
+          "type": "string"
+        },
+        "LFD_INTERNETDISPLAY_117": {
+          "type": "string"
+        },
+        "LFD_INTERNETDISPLAY_184": {
+          "type": "string"
+        },
+        "LFD_INTERNETDISPLAY_230": {
+          "type": "string"
+        },
+        "LFD_INTERNETDISPLAY_269": {
+          "type": "string"
+        },
+        "LFD_INTERNETDISPLAY_37": {
+          "type": "string"
+        },
+        "LFD_INTERNETDISPLAY_56": {
+          "type": "string"
+        },
+        "LFD_INTERNETSITES_118": {
+          "type": "string"
+        },
+        "LFD_INTERNETSITES_185": {
+          "type": "string"
+        },
+        "LFD_INTERNETSITES_231": {
+          "type": "string"
+        },
+        "LFD_INTERNETSITES_270": {
+          "type": "string"
+        },
+        "LFD_INTERNETSITES_38": {
+          "type": "string"
+        },
+        "LFD_INTERNETSITES_57": {
+          "type": "string"
+        },
+        "LFD_KITCHENFEATURES_19": {
+          "type": "string"
+        },
+        "LFD_LAUNDRY_103": {
+          "type": "string"
+        },
+        "LFD_LAUNDRY_171": {
+          "type": "string"
+        },
+        "LFD_LAUNDRY_20": {
+          "type": "string"
+        },
+        "LFD_LEVELLOWER_21": {
+          "type": "string"
+        },
+        "LFD_LEVELSTREET_22": {
+          "type": "string"
+        },
+        "LFD_LEVELUPPER_23": {
+          "type": "string"
+        },
+        "LFD_LOCALGOVERNMENT_219": {
+          "type": "string"
+        },
+        "LFD_LOCATION_220": {
+          "type": "string"
+        },
+        "LFD_LOTDESCRIPTION_104": {
+          "type": "string"
+        },
+        "LFD_LOTDESCRIPTION_172": {
+          "type": "string"
+        },
+        "LFD_LOTDESCRIPTION_24": {
+          "type": "string"
+        },
+        "LFD_LOTDESCRIPTION_259": {
+          "type": "string"
+        },
+        "LFD_LOTDESCRIPTION_46": {
+          "type": "string"
+        },
+        "LFD_MISCELLANEOUS_221": {
+          "type": "string"
+        },
+        "LFD_MISCELLANEOUS_260": {
+          "type": "string"
+        },
+        "LFD_ONSITEPARKINGDESC_173": {
+          "type": "string"
+        },
+        "LFD_OPERATINGEXPENSES_106": {
+          "type": "string"
+        },
+        "LFD_OPERATINGEXPENSES_174": {
+          "type": "string"
+        },
+        "LFD_OTHERUNITS_113": {
+          "type": "string"
+        },
+        "LFD_PARKINGDESCRIPTION_105": {
+          "type": "string"
+        },
+        "LFD_PETS_25": {
+          "type": "string"
+        },
+        "LFD_POOL_26": {
+          "type": "string"
+        },
+        "LFD_POSSESSION_107": {
+          "type": "string"
+        },
+        "LFD_POSSESSION_175": {
+          "type": "string"
+        },
+        "LFD_POSSESSION_222": {
+          "type": "string"
+        },
+        "LFD_POSSESSION_261": {
+          "type": "string"
+        },
+        "LFD_POSSESSION_27": {
+          "type": "string"
+        },
+        "LFD_POSSESSION_47": {
+          "type": "string"
+        },
+        "LFD_REPORTSDISCLOSURES_48": {
+          "type": "string"
+        },
+        "LFD_REPORTS_223": {
+          "type": "string"
+        },
+        "LFD_ROADIMPROVEMENTS_262": {
+          "type": "string"
+        },
+        "LFD_ROADIMPROVEMENTS_49": {
+          "type": "string"
+        },
+        "LFD_ROOF_108": {
+          "type": "string"
+        },
+        "LFD_ROOF_176": {
+          "type": "string"
+        },
+        "LFD_ROOF_224": {
+          "type": "string"
+        },
+        "LFD_ROOF_28": {
+          "type": "string"
+        },
+        "LFD_ROOMADDITIONAL_29": {
+          "type": "string"
+        },
+        "LFD_SALEINCLUDES_225": {
+          "type": "string"
+        },
+        "LFD_SEPARATEMETERS_109": {
+          "type": "string"
+        },
+        "LFD_SEPARATEMETERS_177": {
+          "type": "string"
+        },
+        "LFD_SOLAR_272": {
+          "type": "string"
+        },
+        "LFD_SOLAR_273": {
+          "type": "string"
+        },
+        "LFD_SOLAR_275": {
+          "type": "string"
+        },
+        "LFD_SOMEUNITSHAVE_110": {
+          "type": "string"
+        },
+        "LFD_SOMEUNITSHAVE_178": {
+          "type": "string"
+        },
+        "LFD_STORY_226": {
+          "type": "string"
+        },
+        "LFD_STYLE_31": {
+          "type": "string"
+        },
+        "LFD_TENANTEXPENSES_213": {
+          "type": "string"
+        },
+        "LFD_TENANTPAYS_111": {
+          "type": "string"
+        },
+        "LFD_TENANTPAYS_179": {
+          "type": "string"
+        },
+        "LFD_TERMS_112": {
+          "type": "string"
+        },
+        "LFD_TERMS_180": {
+          "type": "string"
+        },
+        "LFD_TERMS_227": {
+          "type": "string"
+        },
+        "LFD_TERMS_263": {
+          "type": "string"
+        },
+        "LFD_TERMS_32": {
+          "type": "string"
+        },
+        "LFD_TERMS_50": {
+          "type": "string"
+        },
+        "LFD_TRUCKDOOR_228": {
+          "type": "string"
+        },
+        "LFD_UNITFEATURE_33": {
+          "type": "string"
+        },
+        "LFD_UNITSOTHER_181": {
+          "type": "string"
+        },
+        "LFD_USEZONING_264": {
+          "type": "string"
+        },
+        "LFD_USEZONING_51": {
+          "type": "string"
+        },
+        "LFD_UTILAVAILNOTONSITE_265": {
+          "type": "string"
+        },
+        "LFD_UTILAVAILNOTONSITE_52": {
+          "type": "string"
+        },
+        "LFD_UTILITIES_229": {
+          "type": "string"
+        },
+        "LFD_UTILITYONSITE_266": {
+          "type": "string"
+        },
+        "LFD_UTILITYONSITE_53": {
+          "type": "string"
+        },
+        "LFD_VIEWS_114": {
+          "type": "string"
+        },
+        "LFD_VIEWS_182": {
+          "type": "string"
+        },
+        "LFD_VIEWS_267": {
+          "type": "string"
+        },
+        "LFD_VIEWS_34": {
+          "type": "string"
+        },
+        "LFD_VIEWS_54": {
+          "type": "string"
+        },
+        "LFD_WATERSEWER_115": {
+          "type": "string"
+        },
+        "LFD_WATERSEWER_183": {
+          "type": "string"
+        },
+        "LFD_WATERSEWER_268": {
+          "type": "string"
+        },
+        "LFD_WATERSEWER_35": {
+          "type": "string"
+        },
+        "LFD_WATERSEWER_55": {
+          "type": "string"
+        },
+        "LFD_YARDDESCRIPTION_116": {
+          "type": "string"
+        },
+        "LFD_YARDDESCRIPTION_36": {
+          "type": "string"
+        },
+        "LM_Char10_10": {
+          "type": "string"
+        },
+        "LM_Char10_11": {
+          "type": "string"
+        },
+        "LM_Char10_12": {
+          "type": "string"
+        },
+        "LM_Char10_13": {
+          "type": "string"
+        },
+        "LM_Char10_16": {
+          "type": "string"
+        },
+        "LM_Char10_19": {
+          "type": "string"
+        },
+        "LM_Char10_2": {
+          "type": "string"
+        },
+        "LM_Char10_20": {
+          "type": "string"
+        },
+        "LM_Char10_21": {
+          "type": "string"
+        },
+        "LM_Char10_22": {
+          "type": "string"
+        },
+        "LM_Char10_23": {
+          "type": "string"
+        },
+        "LM_Char10_24": {
+          "type": "string"
+        },
+        "LM_Char10_25": {
+          "type": "string"
+        },
+        "LM_Char10_26": {
+          "type": "string"
+        },
+        "LM_Char10_27": {
+          "type": "string"
+        },
+        "LM_Char10_28": {
+          "type": "string"
+        },
+        "LM_Char10_29": {
+          "type": "string"
+        },
+        "LM_Char10_3": {
+          "type": "string"
+        },
+        "LM_Char10_30": {
+          "type": "string"
+        },
+        "LM_Char10_4": {
+          "type": "string"
+        },
+        "LM_Char10_5": {
+          "type": "string"
+        },
+        "LM_Char10_6": {
+          "type": "string"
+        },
+        "LM_Char10_7": {
+          "type": "string"
+        },
+        "LM_Char10_8": {
+          "type": "string"
+        },
+        "LM_Char10_9": {
+          "type": "string"
+        },
+        "LM_Char1_1": {
+          "type": "string"
+        },
+        "LM_Char1_10": {
+          "type": "string"
+        },
+        "LM_Char1_11": {
+          "type": "string"
+        },
+        "LM_Char1_12": {
+          "type": "string"
+        },
+        "LM_Char1_13": {
+          "type": "string"
+        },
+        "LM_Char1_14": {
+          "type": "string"
+        },
+        "LM_Char1_15": {
+          "type": "string"
+        },
+        "LM_Char1_16": {
+          "type": "string"
+        },
+        "LM_Char1_17": {
+          "type": "string"
+        },
+        "LM_Char1_18": {
+          "type": "string"
+        },
+        "LM_Char1_19": {
+          "type": "string"
+        },
+        "LM_Char1_3": {
+          "type": "string"
+        },
+        "LM_Char1_4": {
+          "type": "string"
+        },
+        "LM_Char1_5": {
+          "type": "string"
+        },
+        "LM_Char1_6": {
+          "type": "string"
+        },
+        "LM_Char1_7": {
+          "type": "string"
+        },
+        "LM_Char1_8": {
+          "type": "string"
+        },
+        "LM_Char1_9": {
+          "type": "string"
+        },
+        "LM_Char25_1": {
+          "type": "string"
+        },
+        "LM_Char25_10": {
+          "type": "string"
+        },
+        "LM_Char25_11": {
+          "type": "string"
+        },
+        "LM_Char25_12": {
+          "type": "string"
+        },
+        "LM_Char25_13": {
+          "type": "string"
+        },
+        "LM_Char25_14": {
+          "type": "string"
+        },
+        "LM_Char25_15": {
+          "type": "string"
+        },
+        "LM_Char25_2": {
+          "type": "string"
+        },
+        "LM_Char25_3": {
+          "type": "string"
+        },
+        "LM_Char25_4": {
+          "type": "string"
+        },
+        "LM_Char25_5": {
+          "type": "string"
+        },
+        "LM_Char25_6": {
+          "type": "string"
+        },
+        "LM_Char25_7": {
+          "type": "string"
+        },
+        "LM_Char25_8": {
+          "type": "string"
+        },
+        "LM_Char25_9": {
+          "type": "string"
+        },
+        "LM_Char50_1": {
+          "type": "string"
+        },
+        "LM_Char50_2": {
+          "type": "string"
+        },
+        "LM_Char50_3": {
+          "type": "string"
+        },
+        "LM_Char50_5": {
+          "type": "string"
+        },
+        "LM_Dec_1": {
+          "type": "string"
+        },
+        "LM_Dec_10": {
+          "type": "string"
+        },
+        "LM_Dec_11": {
+          "type": "string"
+        },
+        "LM_Dec_12": {
+          "type": "string"
+        },
+        "LM_Dec_13": {
+          "type": "string"
+        },
+        "LM_Dec_14": {
+          "type": "string"
+        },
+        "LM_Dec_15": {
+          "type": "string"
+        },
+        "LM_Dec_16": {
+          "type": "string"
+        },
+        "LM_Dec_17": {
+          "type": "string"
+        },
+        "LM_Dec_18": {
+          "type": "string"
+        },
+        "LM_Dec_19": {
+          "type": "string"
+        },
+        "LM_Dec_2": {
+          "type": "string"
+        },
+        "LM_Dec_21": {
+          "type": "string"
+        },
+        "LM_Dec_22": {
+          "type": "string"
+        },
+        "LM_Dec_23": {
+          "type": "string"
+        },
+        "LM_Dec_24": {
+          "type": "string"
+        },
+        "LM_Dec_25": {
+          "type": "string"
+        },
+        "LM_Dec_26": {
+          "type": "string"
+        },
+        "LM_Dec_27": {
+          "type": "string"
+        },
+        "LM_Dec_28": {
+          "type": "string"
+        },
+        "LM_Dec_29": {
+          "type": "string"
+        },
+        "LM_Dec_3": {
+          "type": "string"
+        },
+        "LM_Dec_4": {
+          "type": "string"
+        },
+        "LM_Dec_5": {
+          "type": "string"
+        },
+        "LM_Dec_6": {
+          "type": "string"
+        },
+        "LM_Dec_7": {
+          "type": "string"
+        },
+        "LM_Dec_8": {
+          "type": "string"
+        },
+        "LM_Dec_9": {
+          "type": "string"
+        },
+        "LM_Int4_10": {
+          "type": "string"
+        },
+        "LM_Int4_12": {
+          "type": "string"
+        },
+        "LM_Int4_13": {
+          "type": "string"
+        },
+        "LM_Int4_15": {
+          "type": "string"
+        },
+        "LM_Int4_17": {
+          "type": "string"
+        },
+        "LM_Int4_18": {
+          "type": "string"
+        },
+        "LM_Int4_19": {
+          "type": "string"
+        },
+        "LM_Int4_20": {
+          "type": "string"
+        },
+        "LM_Int4_6": {
+          "type": "string"
+        },
+        "LM_Int4_7": {
+          "type": "string"
+        },
+        "LM_Int4_8": {
+          "type": "string"
+        },
+        "LM_Int4_9": {
+          "type": "string"
+        },
+        "LM_char100_1": {
+          "type": "string"
+        },
+        "LM_char100_2": {
+          "type": "string"
+        },
+        "LM_char10_31": {
+          "type": "string"
+        },
+        "LM_char10_32": {
+          "type": "string"
+        },
+        "LM_char10_33": {
+          "type": "string"
+        },
+        "LM_char10_34": {
+          "type": "string"
+        },
+        "LM_char10_35": {
+          "type": "string"
+        },
+        "LM_char10_36": {
+          "type": "string"
+        },
+        "LM_char10_37": {
+          "type": "string"
+        },
+        "LM_char10_38": {
+          "type": "string"
+        },
+        "LM_char10_39": {
+          "type": "string"
+        },
+        "LM_char10_40": {
+          "type": "string"
+        },
+        "LM_char10_41": {
+          "type": "string"
+        },
+        "LM_char10_42": {
+          "type": "string"
+        },
+        "LM_char10_44": {
+          "type": "string"
+        },
+        "LM_char10_45": {
+          "type": "string"
+        },
+        "LM_char10_48": {
+          "type": "string"
+        },
+        "LM_char10_49": {
+          "type": "string"
+        },
+        "LM_char10_52": {
+          "type": "string"
+        },
+        "LM_char10_53": {
+          "type": "string"
+        },
+        "LM_char10_56": {
+          "type": "string"
+        },
+        "LM_char10_57": {
+          "type": "string"
+        },
+        "LM_char10_58": {
+          "type": "string"
+        },
+        "LM_char10_66": {
+          "type": "string"
+        },
+        "LM_char10_67": {
+          "type": "string"
+        },
+        "LM_char10_70": {
+          "type": "string"
+        },
+        "LM_char1_21": {
+          "type": "string"
+        },
+        "LM_char1_22": {
+          "type": "string"
+        },
+        "LM_char1_23": {
+          "type": "string"
+        },
+        "LM_char1_24": {
+          "type": "string"
+        },
+        "LM_char1_25": {
+          "type": "string"
+        },
+        "LM_char1_26": {
+          "type": "string"
+        },
+        "LM_char1_27": {
+          "type": "string"
+        },
+        "LM_char1_28": {
+          "type": "string"
+        },
+        "LM_char1_29": {
+          "type": "string"
+        },
+        "LM_char1_30": {
+          "type": "string"
+        },
+        "LM_char1_31": {
+          "type": "string"
+        },
+        "LM_char1_32": {
+          "type": "string"
+        },
+        "LM_char1_33": {
+          "type": "string"
+        },
+        "LM_char1_34": {
+          "type": "string"
+        },
+        "LM_char1_35": {
+          "type": "string"
+        },
+        "LM_char1_36": {
+          "type": "string"
+        },
+        "LM_char1_37": {
+          "type": "string"
+        },
+        "LM_char1_38": {
+          "type": "string"
+        },
+        "LM_char1_39": {
+          "type": "string"
+        },
+        "LM_char1_40": {
+          "type": "string"
+        },
+        "LM_char1_41": {
+          "type": "string"
+        },
+        "LM_char1_42": {
+          "type": "string"
+        },
+        "LM_char1_43": {
+          "type": "string"
+        },
+        "LM_char1_44": {
+          "type": "string"
+        },
+        "LM_char1_45": {
+          "type": "string"
+        },
+        "LM_char1_49": {
+          "type": "string"
+        },
+        "LM_char255_1": {
+          "type": "string"
+        },
+        "LM_char255_2": {
+          "type": "string"
+        },
+        "LM_char30_1": {
+          "type": "string"
+        },
+        "LM_char30_10": {
+          "type": "string"
+        },
+        "LM_char30_11": {
+          "type": "string"
+        },
+        "LM_char30_12": {
+          "type": "string"
+        },
+        "LM_char30_13": {
+          "type": "string"
+        },
+        "LM_char30_14": {
+          "type": "string"
+        },
+        "LM_char30_15": {
+          "type": "string"
+        },
+        "LM_char30_19": {
+          "type": "string"
+        },
+        "LM_char30_26": {
+          "type": "string"
+        },
+        "LM_char30_27": {
+          "type": "string"
+        },
+        "LM_char30_28": {
+          "type": "string"
+        },
+        "LM_char30_29": {
+          "type": "string"
+        },
+        "LM_char30_30": {
+          "type": "string"
+        },
+        "LM_char30_4": {
+          "type": "string"
+        },
+        "LM_char30_7": {
+          "type": "string"
+        },
+        "LM_char30_8": {
+          "type": "string"
+        },
+        "LM_char50_39": {
+          "type": "string"
+        },
+        "LM_char50_40": {
+          "type": "string"
+        },
+        "LM_char5_1": {
+          "type": "string"
+        },
+        "LM_char5_11": {
+          "type": "string"
+        },
+        "LM_char5_12": {
+          "type": "string"
+        },
+        "LM_char5_13": {
+          "type": "string"
+        },
+        "LM_char5_14": {
+          "type": "string"
+        },
+        "LM_char5_15": {
+          "type": "string"
+        },
+        "LM_char5_16": {
+          "type": "string"
+        },
+        "LM_char5_17": {
+          "type": "string"
+        },
+        "LM_char5_18": {
+          "type": "string"
+        },
+        "LM_char5_19": {
+          "type": "string"
+        },
+        "LM_char5_2": {
+          "type": "string"
+        },
+        "LM_char5_20": {
+          "type": "string"
+        },
+        "LM_char5_21": {
+          "type": "string"
+        },
+        "LM_char5_22": {
+          "type": "string"
+        },
+        "LM_char5_3": {
+          "type": "string"
+        },
+        "LM_int4_21": {
+          "type": "string"
+        },
+        "LM_int4_39": {
+          "type": "string"
+        },
+        "LO1_BranchOfOrgID": {
+          "type": "string"
+        },
+        "LO1_Char10_1": {
+          "type": "string"
+        },
+        "LO1_Char10_2": {
+          "type": "string"
+        },
+        "LO1_EMail": {
+          "type": "string"
+        },
+        "LO1_HiddenOrgID": {
+          "type": "string"
+        },
+        "LO1_HiddenOtyID": {
+          "type": "string"
+        },
+        "LO1_OrgAddress2": {
+          "type": "string"
+        },
+        "LO1_OrgAddressStreet": {
+          "type": "string"
+        },
+        "LO1_OrgCity": {
+          "type": "string"
+        },
+        "LO1_OrgState": {
+          "type": "string"
+        },
+        "LO1_OrgZip": {
+          "type": "string"
+        },
+        "LO1_OrganizationName": {
+          "type": "string"
+        },
+        "LO1_PhoneNumber1": {
+          "type": "string"
+        },
+        "LO1_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "LO1_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "LO1_ShortName": {
+          "type": "string"
+        },
+        "LO1_WebPage": {
+          "type": "string"
+        },
+        "LO1_board_id": {
+          "type": "string"
+        },
+        "LO2_BranchOfOrgID": {
+          "type": "string"
+        },
+        "LO2_Char10_1": {
+          "type": "string"
+        },
+        "LO2_Char10_2": {
+          "type": "string"
+        },
+        "LO2_EMail": {
+          "type": "string"
+        },
+        "LO2_HiddenOrgID": {
+          "type": "string"
+        },
+        "LO2_HiddenOtyID": {
+          "type": "string"
+        },
+        "LO2_OrgAddress2": {
+          "type": "string"
+        },
+        "LO2_OrgAddressStreet": {
+          "type": "string"
+        },
+        "LO2_OrgCity": {
+          "type": "string"
+        },
+        "LO2_OrgState": {
+          "type": "string"
+        },
+        "LO2_OrgZip": {
+          "type": "string"
+        },
+        "LO2_OrganizationName": {
+          "type": "string"
+        },
+        "LO2_PhoneNumber1": {
+          "type": "string"
+        },
+        "LO2_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "LO2_ShortName": {
+          "type": "string"
+        },
+        "LO2_WebPage": {
+          "type": "string"
+        },
+        "LO2_board_id": {
+          "type": "string"
+        },
+        "LOTLAINT": {
+          "type": "string"
+        },
+        "LOTLAPRV": {
+          "type": "string"
+        },
+        "LOTLBLDP": {
+          "type": "string"
+        },
+        "LOTLBUIL": {
+          "type": "string"
+        },
+        "LOTLCDEV": {
+          "type": "string"
+        },
+        "LOTLCONC": {
+          "type": "string"
+        },
+        "LOTLCOND": {
+          "type": "string"
+        },
+        "LOTLCORN": {
+          "type": "string"
+        },
+        "LOTLCRNM": {
+          "type": "string"
+        },
+        "LOTLCROP": {
+          "type": "string"
+        },
+        "LOTLCRTC": {
+          "type": "string"
+        },
+        "LOTLCTTA": {
+          "type": "string"
+        },
+        "LOTLCTYT": {
+          "type": "string"
+        },
+        "LOTLCURR": {
+          "type": "string"
+        },
+        "LOTLDEMO": {
+          "type": "string"
+        },
+        "LOTLDEVS": {
+          "type": "string"
+        },
+        "LOTLDIST": {
+          "type": "string"
+        },
+        "LOTLDMOR": {
+          "type": "string"
+        },
+        "LOTLDOCU": {
+          "type": "string"
+        },
+        "LOTLDVBL": {
+          "type": "string"
+        },
+        "LOTLDVLP": {
+          "type": "string"
+        },
+        "LOTLELEM": {
+          "type": "string"
+        },
+        "LOTLEXCH": {
+          "type": "string"
+        },
+        "LOTLEXIS": {
+          "type": "string"
+        },
+        "LOTLEXST": {
+          "type": "string"
+        },
+        "LOTLFENC": {
+          "type": "string"
+        },
+        "LOTLFINA": {
+          "type": "string"
+        },
+        "LOTLFNCG": {
+          "type": "string"
+        },
+        "LOTLFNCT": {
+          "type": "string"
+        },
+        "LOTLHGTL": {
+          "type": "string"
+        },
+        "LOTLHIGH": {
+          "type": "string"
+        },
+        "LOTLHOA": {
+          "type": "string"
+        },
+        "LOTLHOAA": {
+          "type": "string"
+        },
+        "LOTLHOAD": {
+          "type": "string"
+        },
+        "LOTLHOAF": {
+          "type": "string"
+        },
+        "LOTLHOAI": {
+          "type": "string"
+        },
+        "LOTLHOAP": {
+          "type": "string"
+        },
+        "LOTLIMPR": {
+          "type": "string"
+        },
+        "LOTLJRMD": {
+          "type": "string"
+        },
+        "LOTLKSHS": {
+          "type": "string"
+        },
+        "LOTLLBLO": {
+          "type": "string"
+        },
+        "LOTLLDES": {
+          "type": "string"
+        },
+        "LOTLLDRR": {
+          "type": "string"
+        },
+        "LOTLLEAA": {
+          "type": "string"
+        },
+        "LOTLLOCA": {
+          "type": "string"
+        },
+        "LOTLLOTA": {
+          "type": "string"
+        },
+        "LOTLLSPF": {
+          "type": "string"
+        },
+        "LOTLLTDF": {
+          "type": "string"
+        },
+        "LOTLLTDL": {
+          "type": "string"
+        },
+        "LOTLLTDR": {
+          "type": "string"
+        },
+        "LOTLLTDS": {
+          "type": "string"
+        },
+        "LOTLMINR": {
+          "type": "string"
+        },
+        "LOTLMISC": {
+          "type": "string"
+        },
+        "LOTLMNLR": {
+          "type": "string"
+        },
+        "LOTLMTHR": {
+          "type": "string"
+        },
+        "LOTLNEWC": {
+          "type": "string"
+        },
+        "LOTLNLTS": {
+          "type": "string"
+        },
+        "LOTLNOLT": {
+          "type": "string"
+        },
+        "LOTLNPRK": {
+          "type": "string"
+        },
+        "LOTLOLD2": {
+          "type": "string"
+        },
+        "LOTLOLTD": {
+          "type": "string"
+        },
+        "LOTLONMK": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "LOTLOWBS": {
+          "type": "string"
+        },
+        "LOTLOWNN": {
+          "type": "string"
+        },
+        "LOTLOWNP": {
+          "type": "string"
+        },
+        "LOTLPAID": {
+          "type": "string"
+        },
+        "LOTLPEND": {
+          "type": "string"
+        },
+        "LOTLPERC": {
+          "type": "string"
+        },
+        "LOTLPLAN": {
+          "type": "string"
+        },
+        "LOTLPNDL": {
+          "type": "string"
+        },
+        "LOTLPOSS": {
+          "type": "string"
+        },
+        "LOTLPRBS": {
+          "type": "string"
+        },
+        "LOTLPRKL": {
+          "type": "string"
+        },
+        "LOTLPRKT": {
+          "type": "string"
+        },
+        "LOTLPROB": {
+          "type": "string"
+        },
+        "LOTLREOO": {
+          "type": "string"
+        },
+        "LOTLRTYP": {
+          "type": "string"
+        },
+        "LOTLSALE": {
+          "type": "string"
+        },
+        "LOTLSBJC": {
+          "type": "string"
+        },
+        "LOTLSCOP": {
+          "type": "string"
+        },
+        "LOTLSDES": {
+          "type": "string"
+        },
+        "LOTLSECP": {
+          "type": "string"
+        },
+        "LOTLSEWS": {
+          "type": "string"
+        },
+        "LOTLSHOW": {
+          "type": "string"
+        },
+        "LOTLSOIL": {
+          "type": "string"
+        },
+        "LOTLSOLR": {
+          "type": "string"
+        },
+        "LOTLSOLS": {
+          "type": "string"
+        },
+        "LOTLSPEC": {
+          "type": "string"
+        },
+        "LOTLSPEZ": {
+          "type": "string"
+        },
+        "LOTLSRFW": {
+          "type": "string"
+        },
+        "LOTLSRVY": {
+          "type": "string"
+        },
+        "LOTLSTDS": {
+          "type": "string"
+        },
+        "LOTLSTNT": {
+          "type": "string"
+        },
+        "LOTLSURF": {
+          "type": "string"
+        },
+        "LOTLSURV": {
+          "type": "string"
+        },
+        "LOTLTAGT": {
+          "type": "string"
+        },
+        "LOTLTICC": {
+          "type": "string"
+        },
+        "LOTLTOPO": {
+          "type": "string"
+        },
+        "LOTLUBLT": {
+          "type": "string"
+        },
+        "LOTLUNCF": {
+          "type": "string"
+        },
+        "LOTLUSE": {
+          "type": "string"
+        },
+        "LOTLUTIL": {
+          "type": "string"
+        },
+        "LOTLVIEW": {
+          "type": "string"
+        },
+        "LOTLWELL": {
+          "type": "string"
+        },
+        "LOTLWTRS": {
+          "type": "string"
+        },
+        "LOTLWTSW": {
+          "type": "string"
+        },
+        "LOTLYRON": {
+          "type": "string"
+        },
+        "LOTLZONA": {
+          "type": "string"
+        },
+        "LOTLZONE": {
+          "type": "string"
+        },
+        "LOTLZONG": {
+          "type": "string"
+        },
+        "LR_remarks11": {
+          "type": "string"
+        },
+        "LR_remarks22": {
+          "type": "string"
+        },
+        "LV_vow_address": {
+          "type": "string"
+        },
+        "LV_vow_avm": {
+          "type": "string"
+        },
+        "LV_vow_comment": {
+          "type": "string"
+        },
+        "LV_vow_include": {
+          "type": "string"
+        },
+        "L_Address": {
+          "type": "string"
+        },
+        "L_Address2": {
+          "type": "string"
+        },
+        "L_AddressDirection": {
+          "type": "string"
+        },
+        "L_AddressNumber": {
+          "type": "string"
+        },
+        "L_AddressSearchNumber": {
+          "type": "string"
+        },
+        "L_AddressStreet": {
+          "type": "string"
+        },
+        "L_Area": {
+          "type": "string"
+        },
+        "L_AskingPrice": {
+          "type": "string"
+        },
+        "L_CDOMLS": {
+          "type": "string"
+        },
+        "L_City": {
+          "type": "string"
+        },
+        "L_Class": {
+          "type": "string"
+        },
+        "L_ClosingDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_ContractDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_DOM": {
+          "type": "string"
+        },
+        "L_DOMLS": {
+          "type": "string"
+        },
+        "L_DisplayId": {
+          "type": "string"
+        },
+        "L_EquityAmount": {
+          "type": "string"
+        },
+        "L_FirstPhotoAddDt": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_HotSheetDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_HowSold": {
+          "type": "string"
+        },
+        "L_InputDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_Keyword1": {
+          "type": "string"
+        },
+        "L_Keyword2": {
+          "type": "string"
+        },
+        "L_Keyword3": {
+          "type": "string"
+        },
+        "L_Keyword4": {
+          "type": "string"
+        },
+        "L_Keyword5": {
+          "type": "string"
+        },
+        "L_Keyword6": {
+          "type": "string"
+        },
+        "L_Keyword7": {
+          "type": "string"
+        },
+        "L_Last_Photo_updt": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_ListAgent1": {
+          "type": "string"
+        },
+        "L_ListAgent2": {
+          "type": "string"
+        },
+        "L_ListOffice1": {
+          "type": "string"
+        },
+        "L_ListOffice2": {
+          "type": "string"
+        },
+        "L_ListingDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_ListingID": {
+          "type": "string"
+        },
+        "L_NumAcres": {
+          "type": "string"
+        },
+        "L_NumUnits": {
+          "type": "string"
+        },
+        "L_OffMarketDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_OriginalPrice": {
+          "type": "string"
+        },
+        "L_PictureCount": {
+          "type": "string"
+        },
+        "L_PriceDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_Remarks": {
+          "type": "string"
+        },
+        "L_SaleRent": {
+          "type": "string"
+        },
+        "L_SellingAgent1": {
+          "type": "string"
+        },
+        "L_SellingAgent2": {
+          "type": "string"
+        },
+        "L_SellingOffice1": {
+          "type": "string"
+        },
+        "L_SellingOffice2": {
+          "type": "string"
+        },
+        "L_SoldPrice": {
+          "type": "string"
+        },
+        "L_SquareFeet": {
+          "type": "string"
+        },
+        "L_State": {
+          "type": "string"
+        },
+        "L_Status": {
+          "type": "string"
+        },
+        "L_StatusCatID": {
+          "type": "string"
+        },
+        "L_StatusDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_StatusID": {
+          "type": "string"
+        },
+        "L_SystemPrice": {
+          "type": "string"
+        },
+        "L_Type_": {
+          "type": "string"
+        },
+        "L_UpdateDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "L_Zip": {
+          "type": "string"
+        },
+        "L_listings_associated_doc_count": {
+          "type": "string"
+        },
+        "LastModifiedDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "LastUnitNumberUsed": {
+          "type": "string"
+        },
+        "Latitude": {
+          "type": "string"
+        },
+        "LeaseTerm": {
+          "type": "string"
+        },
+        "LeaseType": {
+          "type": "string"
+        },
+        "ListingAgentFirstName": {
+          "type": "string"
+        },
+        "ListingAgentLastName": {
+          "type": "string"
+        },
+        "ListingAgentMLSID": {
+          "type": "string"
+        },
+        "ListingAgentNumber": {
+          "type": "string"
+        },
+        "ListingCoAgentMLSID": {
+          "type": "string"
+        },
+        "ListingCoAgentNumber": {
+          "type": "string"
+        },
+        "ListingCoOfficeMLSID": {
+          "type": "string"
+        },
+        "ListingCoOfficeName": {
+          "type": "string"
+        },
+        "ListingCoOfficeNumber": {
+          "type": "string"
+        },
+        "ListingDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "ListingNumberDisplay": {
+          "type": "string"
+        },
+        "ListingOfficeMLSID": {
+          "type": "string"
+        },
+        "ListingOfficeName": {
+          "type": "string"
+        },
+        "ListingOfficeNumber": {
+          "type": "string"
+        },
+        "ListingPrice": {
+          "type": "string"
+        },
+        "ListingRid": {
+          "type": "string"
+        },
+        "Longitude": {
+          "type": "string"
+        },
+        "LotMeasurement": {
+          "type": "string"
+        },
+        "LotSizeSource": {
+          "type": "string"
+        },
+        "LotSquareFootage": {
+          "type": "string"
+        },
+        "MFM22LSE": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM22NRM": {
+          "type": "string"
+        },
+        "MFM22OCL": {
+          "type": "string"
+        },
+        "MFM22OCP": {
+          "type": "string"
+        },
+        "MFM22OPH": {
+          "type": "string"
+        },
+        "MFM22RTF": {
+          "type": "string"
+        },
+        "MFM22RTP": {
+          "type": "string"
+        },
+        "MFM23LSE": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM23NRM": {
+          "type": "string"
+        },
+        "MFM23OCP": {
+          "type": "string"
+        },
+        "MFM23OLN": {
+          "type": "string"
+        },
+        "MFM23OPH": {
+          "type": "string"
+        },
+        "MFM23RTF": {
+          "type": "string"
+        },
+        "MFM23RTP": {
+          "type": "string"
+        },
+        "MFM24LSE": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM24NRM": {
+          "type": "string"
+        },
+        "MFM24OCP": {
+          "type": "string"
+        },
+        "MFM24OLN": {
+          "type": "string"
+        },
+        "MFM24OPH": {
+          "type": "string"
+        },
+        "MFM24RTF": {
+          "type": "string"
+        },
+        "MFM24RTP": {
+          "type": "string"
+        },
+        "MFM24USF": {
+          "type": "string"
+        },
+        "MFM2ACSC": {
+          "type": "string"
+        },
+        "MFM2ACTU": {
+          "type": "string"
+        },
+        "MFM2AEXP": {
+          "type": "string"
+        },
+        "MFM2AINT": {
+          "type": "string"
+        },
+        "MFM2BLDR": {
+          "type": "string"
+        },
+        "MFM2BRGR": {
+          "type": "string"
+        },
+        "MFM2BSMT": {
+          "type": "string"
+        },
+        "MFM2CAPR": {
+          "type": "string"
+        },
+        "MFM2CDEV": {
+          "type": "string"
+        },
+        "MFM2CNTN": {
+          "type": "string"
+        },
+        "MFM2CNTP": {
+          "type": "string"
+        },
+        "MFM2CNTT": {
+          "type": "string"
+        },
+        "MFM2COMM": {
+          "type": "string"
+        },
+        "MFM2CONC": {
+          "type": "string"
+        },
+        "MFM2CONS": {
+          "type": "string"
+        },
+        "MFM2CRTC": {
+          "type": "string"
+        },
+        "MFM2CTTA": {
+          "type": "string"
+        },
+        "MFM2CTYT": {
+          "type": "string"
+        },
+        "MFM2DEPT": {
+          "type": "string"
+        },
+        "MFM2DIST": {
+          "type": "string"
+        },
+        "MFM2DOCU": {
+          "type": "string"
+        },
+        "MFM2DRAI": {
+          "type": "string"
+        },
+        "MFM2EINS": {
+          "type": "string"
+        },
+        "MFM2ELEM": {
+          "type": "string"
+        },
+        "MFM2EMAN": {
+          "type": "string"
+        },
+        "MFM2EMGT": {
+          "type": "string"
+        },
+        "MFM2EMIS": {
+          "type": "string"
+        },
+        "MFM2ENGR": {
+          "type": "string"
+        },
+        "MFM2ENGY": {
+          "type": "string"
+        },
+        "MFM2ERNT": {
+          "type": "string"
+        },
+        "MFM2ESTL": {
+          "type": "string"
+        },
+        "MFM2ETAX": {
+          "type": "string"
+        },
+        "MFM2EUTL": {
+          "type": "string"
+        },
+        "MFM2EXCH": {
+          "type": "string"
+        },
+        "MFM2EXPN": {
+          "type": "string"
+        },
+        "MFM2EXTR": {
+          "type": "string"
+        },
+        "MFM2FINA": {
+          "type": "string"
+        },
+        "MFM2FIRE": {
+          "type": "string"
+        },
+        "MFM2FLOR": {
+          "type": "string"
+        },
+        "MFM2FLRS": {
+          "type": "string"
+        },
+        "MFM2FNCT": {
+          "type": "string"
+        },
+        "MFM2FOUN": {
+          "type": "string"
+        },
+        "MFM2GRBW": {
+          "type": "string"
+        },
+        "MFM2GRM": {
+          "type": "string"
+        },
+        "MFM2GRRT": {
+          "type": "string"
+        },
+        "MFM2GRSI": {
+          "type": "string"
+        },
+        "MFM2HGTL": {
+          "type": "string"
+        },
+        "MFM2HIGH": {
+          "type": "string"
+        },
+        "MFM2HTCL": {
+          "type": "string"
+        },
+        "MFM2INCE": {
+          "type": "string"
+        },
+        "MFM2JRMD": {
+          "type": "string"
+        },
+        "MFM2KSHS": {
+          "type": "string"
+        },
+        "MFM2LAUN": {
+          "type": "string"
+        },
+        "MFM2LBLO": {
+          "type": "string"
+        },
+        "MFM2LDES": {
+          "type": "string"
+        },
+        "MFM2LNDA": {
+          "type": "string"
+        },
+        "MFM2LOCA": {
+          "type": "string"
+        },
+        "MFM2LOTD": {
+          "type": "string"
+        },
+        "MFM2LSEX": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM2LTDS": {
+          "type": "string"
+        },
+        "MFM2MEXP": {
+          "type": "string"
+        },
+        "MFM2MINC": {
+          "type": "string"
+        },
+        "MFM2MISC": {
+          "type": "string"
+        },
+        "MFM2NBLD": {
+          "type": "string"
+        },
+        "MFM2NEWC": {
+          "type": "string"
+        },
+        "MFM2NFLR": {
+          "type": "string"
+        },
+        "MFM2NINC": {
+          "type": "string"
+        },
+        "MFM2NIND": {
+          "type": "string"
+        },
+        "MFM2NOBL": {
+          "type": "string"
+        },
+        "MFM2NOOC": {
+          "type": "string"
+        },
+        "MFM2NPRK": {
+          "type": "string"
+        },
+        "MFM2NRMS": {
+          "type": "string"
+        },
+        "MFM2NTDM": {
+          "type": "string"
+        },
+        "MFM2NUMS": {
+          "type": "string"
+        },
+        "MFM2NUNT": {
+          "type": "string"
+        },
+        "MFM2NVAC": {
+          "type": "string"
+        },
+        "MFM2OCCP": {
+          "type": "string"
+        },
+        "MFM2OCLN": {
+          "type": "string"
+        },
+        "MFM2OCPH": {
+          "type": "string"
+        },
+        "MFM2ONMK": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM2OPEX": {
+          "type": "string"
+        },
+        "MFM2OPPI": {
+          "type": "string"
+        },
+        "MFM2OWBS": {
+          "type": "string"
+        },
+        "MFM2PEND": {
+          "type": "string"
+        },
+        "MFM2PKGR": {
+          "type": "string"
+        },
+        "MFM2PLAN": {
+          "type": "string"
+        },
+        "MFM2PLYN": {
+          "type": "string"
+        },
+        "MFM2PMCO": {
+          "type": "string"
+        },
+        "MFM2PMPH": {
+          "type": "string"
+        },
+        "MFM2PNDL": {
+          "type": "string"
+        },
+        "MFM2POSS": {
+          "type": "string"
+        },
+        "MFM2PRBS": {
+          "type": "string"
+        },
+        "MFM2PRKG": {
+          "type": "string"
+        },
+        "MFM2PROB": {
+          "type": "string"
+        },
+        "MFM2REOO": {
+          "type": "string"
+        },
+        "MFM2RNT2": {
+          "type": "string"
+        },
+        "MFM2RNT3": {
+          "type": "string"
+        },
+        "MFM2RNT4": {
+          "type": "string"
+        },
+        "MFM2RNTF": {
+          "type": "string"
+        },
+        "MFM2RNTP": {
+          "type": "string"
+        },
+        "MFM2RNTS": {
+          "type": "string"
+        },
+        "MFM2ROOF": {
+          "type": "string"
+        },
+        "MFM2SAFE": {
+          "type": "string"
+        },
+        "MFM2SALE": {
+          "type": "string"
+        },
+        "MFM2SBJC": {
+          "type": "string"
+        },
+        "MFM2SCOP": {
+          "type": "string"
+        },
+        "MFM2SEPM": {
+          "type": "string"
+        },
+        "MFM2SEWS": {
+          "type": "string"
+        },
+        "MFM2SHOW": {
+          "type": "string"
+        },
+        "MFM2SIGN": {
+          "type": "string"
+        },
+        "MFM2SPCF": {
+          "type": "string"
+        },
+        "MFM2SPEC": {
+          "type": "string"
+        },
+        "MFM2SPEZ": {
+          "type": "string"
+        },
+        "MFM2STNT": {
+          "type": "string"
+        },
+        "MFM2STYL": {
+          "type": "string"
+        },
+        "MFM2TAGT": {
+          "type": "string"
+        },
+        "MFM2TENP": {
+          "type": "string"
+        },
+        "MFM2TICC": {
+          "type": "string"
+        },
+        "MFM2TNTP": {
+          "type": "string"
+        },
+        "MFM2TYPE": {
+          "type": "string"
+        },
+        "MFM2U1AC": {
+          "type": "string"
+        },
+        "MFM2U1BD": {
+          "type": "string"
+        },
+        "MFM2U1BF": {
+          "type": "string"
+        },
+        "MFM2U1BP": {
+          "type": "string"
+        },
+        "MFM2U1ID": {
+          "type": "string"
+        },
+        "MFM2U1LL": {
+          "type": "string"
+        },
+        "MFM2U1LS": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM2U1OC": {
+          "type": "string"
+        },
+        "MFM2U1ON": {
+          "type": "string"
+        },
+        "MFM2U1OP": {
+          "type": "string"
+        },
+        "MFM2U1RT": {
+          "type": "string"
+        },
+        "MFM2U1SQ": {
+          "type": "string"
+        },
+        "MFM2U1SS": {
+          "type": "string"
+        },
+        "MFM2U1TR": {
+          "type": "string"
+        },
+        "MFM2U2AC": {
+          "type": "string"
+        },
+        "MFM2U2BD": {
+          "type": "string"
+        },
+        "MFM2U2BF": {
+          "type": "string"
+        },
+        "MFM2U2BP": {
+          "type": "string"
+        },
+        "MFM2U2ID": {
+          "type": "string"
+        },
+        "MFM2U2LL": {
+          "type": "string"
+        },
+        "MFM2U2LS": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM2U2OC": {
+          "type": "string"
+        },
+        "MFM2U2ON": {
+          "type": "string"
+        },
+        "MFM2U2OP": {
+          "type": "string"
+        },
+        "MFM2U2RT": {
+          "type": "string"
+        },
+        "MFM2U2SF": {
+          "type": "string"
+        },
+        "MFM2U2SQ": {
+          "type": "string"
+        },
+        "MFM2U2SS": {
+          "type": "string"
+        },
+        "MFM2U2TR": {
+          "type": "string"
+        },
+        "MFM2U3AC": {
+          "type": "string"
+        },
+        "MFM2U3BD": {
+          "type": "string"
+        },
+        "MFM2U3BF": {
+          "type": "string"
+        },
+        "MFM2U3BP": {
+          "type": "string"
+        },
+        "MFM2U3ID": {
+          "type": "string"
+        },
+        "MFM2U3LL": {
+          "type": "string"
+        },
+        "MFM2U3LS": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM2U3OC": {
+          "type": "string"
+        },
+        "MFM2U3ON": {
+          "type": "string"
+        },
+        "MFM2U3OP": {
+          "type": "string"
+        },
+        "MFM2U3RT": {
+          "type": "string"
+        },
+        "MFM2U3SF": {
+          "type": "string"
+        },
+        "MFM2U3SQ": {
+          "type": "string"
+        },
+        "MFM2U3SS": {
+          "type": "string"
+        },
+        "MFM2U3TR": {
+          "type": "string"
+        },
+        "MFM2U4AC": {
+          "type": "string"
+        },
+        "MFM2U4BD": {
+          "type": "string"
+        },
+        "MFM2U4BF": {
+          "type": "string"
+        },
+        "MFM2U4BP": {
+          "type": "string"
+        },
+        "MFM2U4ID": {
+          "type": "string"
+        },
+        "MFM2U4LL": {
+          "type": "string"
+        },
+        "MFM2U4LS": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM2U4OC": {
+          "type": "string"
+        },
+        "MFM2U4ON": {
+          "type": "string"
+        },
+        "MFM2U4OP": {
+          "type": "string"
+        },
+        "MFM2U4RT": {
+          "type": "string"
+        },
+        "MFM2U4SQ": {
+          "type": "string"
+        },
+        "MFM2U4SS": {
+          "type": "string"
+        },
+        "MFM2U4TR": {
+          "type": "string"
+        },
+        "MFM2UBLT": {
+          "type": "string"
+        },
+        "MFM2UNCF": {
+          "type": "string"
+        },
+        "MFM2UNIT": {
+          "type": "string"
+        },
+        "MFM2UNSF": {
+          "type": "string"
+        },
+        "MFM2UNT1": {
+          "type": "string"
+        },
+        "MFM2UNT2": {
+          "type": "string"
+        },
+        "MFM2UNT3": {
+          "type": "string"
+        },
+        "MFM2UNT4": {
+          "type": "string"
+        },
+        "MFM2UT1I": {
+          "type": "string"
+        },
+        "MFM2UT2I": {
+          "type": "string"
+        },
+        "MFM2UT3I": {
+          "type": "string"
+        },
+        "MFM2UT4I": {
+          "type": "string"
+        },
+        "MFM2UTIL": {
+          "type": "string"
+        },
+        "MFM2VIEW": {
+          "type": "string"
+        },
+        "MFM2VWYN": {
+          "type": "string"
+        },
+        "MFM2WTRS": {
+          "type": "string"
+        },
+        "MFM2YARD": {
+          "type": "string"
+        },
+        "MFM2YEAR": {
+          "type": "string"
+        },
+        "MFM2YRGR": {
+          "type": "string"
+        },
+        "MFM2ZONE": {
+          "type": "string"
+        },
+        "MFM2ZONG": {
+          "type": "string"
+        },
+        "MFM51BAO": {
+          "type": "string"
+        },
+        "MFM51BDO": {
+          "type": "string"
+        },
+        "MFM51BED": {
+          "type": "string"
+        },
+        "MFM51BRR": {
+          "type": "string"
+        },
+        "MFM52BAO": {
+          "type": "string"
+        },
+        "MFM52BDO": {
+          "type": "string"
+        },
+        "MFM52BED": {
+          "type": "string"
+        },
+        "MFM52BRR": {
+          "type": "string"
+        },
+        "MFM53BAO": {
+          "type": "string"
+        },
+        "MFM53BDO": {
+          "type": "string"
+        },
+        "MFM53BED": {
+          "type": "string"
+        },
+        "MFM53BRR": {
+          "type": "string"
+        },
+        "MFM54BAO": {
+          "type": "string"
+        },
+        "MFM54BDO": {
+          "type": "string"
+        },
+        "MFM54BED": {
+          "type": "string"
+        },
+        "MFM54BRR": {
+          "type": "string"
+        },
+        "MFM5ACTU": {
+          "type": "string"
+        },
+        "MFM5AEXP": {
+          "type": "string"
+        },
+        "MFM5AINT": {
+          "type": "string"
+        },
+        "MFM5APEQ": {
+          "type": "string"
+        },
+        "MFM5ASCS": {
+          "type": "string"
+        },
+        "MFM5BLDN": {
+          "type": "string"
+        },
+        "MFM5BLDR": {
+          "type": "string"
+        },
+        "MFM5BRGR": {
+          "type": "string"
+        },
+        "MFM5BSMT": {
+          "type": "string"
+        },
+        "MFM5CAP": {
+          "type": "string"
+        },
+        "MFM5CAPR": {
+          "type": "string"
+        },
+        "MFM5CDEV": {
+          "type": "string"
+        },
+        "MFM5CMRR": {
+          "type": "string"
+        },
+        "MFM5COMM": {
+          "type": "string"
+        },
+        "MFM5COMU": {
+          "type": "string"
+        },
+        "MFM5CONC": {
+          "type": "string"
+        },
+        "MFM5CONS": {
+          "type": "string"
+        },
+        "MFM5CRTC": {
+          "type": "string"
+        },
+        "MFM5CTTA": {
+          "type": "string"
+        },
+        "MFM5CTYT": {
+          "type": "string"
+        },
+        "MFM5DIST": {
+          "type": "string"
+        },
+        "MFM5DOCU": {
+          "type": "string"
+        },
+        "MFM5DRAI": {
+          "type": "string"
+        },
+        "MFM5EGRI": {
+          "type": "string"
+        },
+        "MFM5EINS": {
+          "type": "string"
+        },
+        "MFM5ELEM": {
+          "type": "string"
+        },
+        "MFM5EMAN": {
+          "type": "string"
+        },
+        "MFM5EMGT": {
+          "type": "string"
+        },
+        "MFM5EMIS": {
+          "type": "string"
+        },
+        "MFM5ENGR": {
+          "type": "string"
+        },
+        "MFM5ESTL": {
+          "type": "string"
+        },
+        "MFM5ETAX": {
+          "type": "string"
+        },
+        "MFM5EUTL": {
+          "type": "string"
+        },
+        "MFM5EXCH": {
+          "type": "string"
+        },
+        "MFM5EXPN": {
+          "type": "string"
+        },
+        "MFM5EXTR": {
+          "type": "string"
+        },
+        "MFM5FINA": {
+          "type": "string"
+        },
+        "MFM5FLOR": {
+          "type": "string"
+        },
+        "MFM5FLRS": {
+          "type": "string"
+        },
+        "MFM5FNCT": {
+          "type": "string"
+        },
+        "MFM5FOUN": {
+          "type": "string"
+        },
+        "MFM5FURU": {
+          "type": "string"
+        },
+        "MFM5GRBW": {
+          "type": "string"
+        },
+        "MFM5GRM": {
+          "type": "string"
+        },
+        "MFM5GRRT": {
+          "type": "string"
+        },
+        "MFM5GRSI": {
+          "type": "string"
+        },
+        "MFM5HGTL": {
+          "type": "string"
+        },
+        "MFM5HIGH": {
+          "type": "string"
+        },
+        "MFM5HTCL": {
+          "type": "string"
+        },
+        "MFM5HTCO": {
+          "type": "string"
+        },
+        "MFM5INCE": {
+          "type": "string"
+        },
+        "MFM5JRMD": {
+          "type": "string"
+        },
+        "MFM5KSHS": {
+          "type": "string"
+        },
+        "MFM5LAUN": {
+          "type": "string"
+        },
+        "MFM5LBLO": {
+          "type": "string"
+        },
+        "MFM5LDES": {
+          "type": "string"
+        },
+        "MFM5LDNG": {
+          "type": "string"
+        },
+        "MFM5LEAS": {
+          "type": "string"
+        },
+        "MFM5LESD": {
+          "type": "string"
+        },
+        "MFM5LNDA": {
+          "type": "string"
+        },
+        "MFM5LOAD": {
+          "type": "string"
+        },
+        "MFM5LOCA": {
+          "type": "string"
+        },
+        "MFM5LOTD": {
+          "type": "string"
+        },
+        "MFM5LSTM": {
+          "type": "string"
+        },
+        "MFM5MEXP": {
+          "type": "string"
+        },
+        "MFM5MINC": {
+          "type": "string"
+        },
+        "MFM5MISC": {
+          "type": "string"
+        },
+        "MFM5N1BU": {
+          "type": "string"
+        },
+        "MFM5N2BU": {
+          "type": "string"
+        },
+        "MFM5N3BU": {
+          "type": "string"
+        },
+        "MFM5NBLD": {
+          "type": "string"
+        },
+        "MFM5NCAR": {
+          "type": "string"
+        },
+        "MFM5NCMU": {
+          "type": "string"
+        },
+        "MFM5NEWC": {
+          "type": "string"
+        },
+        "MFM5NFRU": {
+          "type": "string"
+        },
+        "MFM5NGAR": {
+          "type": "string"
+        },
+        "MFM5NGST": {
+          "type": "string"
+        },
+        "MFM5NINC": {
+          "type": "string"
+        },
+        "MFM5NINP": {
+          "type": "string"
+        },
+        "MFM5NOBL": {
+          "type": "string"
+        },
+        "MFM5NOOC": {
+          "type": "string"
+        },
+        "MFM5NOPN": {
+          "type": "string"
+        },
+        "MFM5NOSO": {
+          "type": "string"
+        },
+        "MFM5NOST": {
+          "type": "string"
+        },
+        "MFM5NPRK": {
+          "type": "string"
+        },
+        "MFM5NRMS": {
+          "type": "string"
+        },
+        "MFM5NRVB": {
+          "type": "string"
+        },
+        "MFM5NSTO": {
+          "type": "string"
+        },
+        "MFM5NSTU": {
+          "type": "string"
+        },
+        "MFM5NTDM": {
+          "type": "string"
+        },
+        "MFM5NUND": {
+          "type": "string"
+        },
+        "MFM5NUNT": {
+          "type": "string"
+        },
+        "MFM5NVAC": {
+          "type": "string"
+        },
+        "MFM5ONMK": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "MFM5OPEX": {
+          "type": "string"
+        },
+        "MFM5OPPI": {
+          "type": "string"
+        },
+        "MFM5OTHU": {
+          "type": "string"
+        },
+        "MFM5OWBS": {
+          "type": "string"
+        },
+        "MFM5PEND": {
+          "type": "string"
+        },
+        "MFM5PKGR": {
+          "type": "string"
+        },
+        "MFM5PLAN": {
+          "type": "string"
+        },
+        "MFM5PMCO": {
+          "type": "string"
+        },
+        "MFM5PMPH": {
+          "type": "string"
+        },
+        "MFM5PNDL": {
+          "type": "string"
+        },
+        "MFM5POSS": {
+          "type": "string"
+        },
+        "MFM5PRBS": {
+          "type": "string"
+        },
+        "MFM5PRKG": {
+          "type": "string"
+        },
+        "MFM5PROB": {
+          "type": "string"
+        },
+        "MFM5REOO": {
+          "type": "string"
+        },
+        "MFM5RNR2": {
+          "type": "string"
+        },
+        "MFM5ROOF": {
+          "type": "string"
+        },
+        "MFM5RTR1": {
+          "type": "string"
+        },
+        "MFM5RTR3": {
+          "type": "string"
+        },
+        "MFM5RTRC": {
+          "type": "string"
+        },
+        "MFM5RTRS": {
+          "type": "string"
+        },
+        "MFM5SAFE": {
+          "type": "string"
+        },
+        "MFM5SALE": {
+          "type": "string"
+        },
+        "MFM5SBJC": {
+          "type": "string"
+        },
+        "MFM5SCOP": {
+          "type": "string"
+        },
+        "MFM5SEPM": {
+          "type": "string"
+        },
+        "MFM5SEWS": {
+          "type": "string"
+        },
+        "MFM5SHOW": {
+          "type": "string"
+        },
+        "MFM5SIGN": {
+          "type": "string"
+        },
+        "MFM5SPEC": {
+          "type": "string"
+        },
+        "MFM5SPET": {
+          "type": "string"
+        },
+        "MFM5SPEZ": {
+          "type": "string"
+        },
+        "MFM5SPMT": {
+          "type": "string"
+        },
+        "MFM5STAO": {
+          "type": "string"
+        },
+        "MFM5STNT": {
+          "type": "string"
+        },
+        "MFM5STRR": {
+          "type": "string"
+        },
+        "MFM5STYL": {
+          "type": "string"
+        },
+        "MFM5TAGT": {
+          "type": "string"
+        },
+        "MFM5TENP": {
+          "type": "string"
+        },
+        "MFM5TICC": {
+          "type": "string"
+        },
+        "MFM5TNTP": {
+          "type": "string"
+        },
+        "MFM5TYPE": {
+          "type": "string"
+        },
+        "MFM5UBLT": {
+          "type": "string"
+        },
+        "MFM5UNCF": {
+          "type": "string"
+        },
+        "MFM5UNIT": {
+          "type": "string"
+        },
+        "MFM5UTIL": {
+          "type": "string"
+        },
+        "MFM5VIEW": {
+          "type": "string"
+        },
+        "MFM5WTRS": {
+          "type": "string"
+        },
+        "MFM5YARD": {
+          "type": "string"
+        },
+        "MFM5YEAR": {
+          "type": "string"
+        },
+        "MFM5YRGR": {
+          "type": "string"
+        },
+        "MFM5ZONE": {
+          "type": "string"
+        },
+        "MFM5ZONG": {
+          "type": "string"
+        },
+        "MLNumber": {
+          "type": "string"
+        },
+        "MLS": {
+          "type": "string"
+        },
+        "MapBook": {
+          "type": "string"
+        },
+        "MapPage": {
+          "type": "string"
+        },
+        "MapXCoordinate": {
+          "type": "string"
+        },
+        "MapYCoordinate": {
+          "type": "string"
+        },
+        "MarketingRemarks": {
+          "type": "string"
+        },
+        "NonMemberSalesAgentName": {
+          "type": "string"
+        },
+        "NonMemberSalesOfficeName": {
+          "type": "string"
+        },
+        "OccupantName": {
+          "type": "string"
+        },
+        "OccupantType": {
+          "type": "string"
+        },
+        "OnMarket": {
+          "type": "string"
+        },
+        "OnMarketDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "OpenHouses": {
+          "type": "string"
+        },
+        "OriginalPrice": {
+          "type": "string"
+        },
+        "OwnerName": {
+          "type": "string"
+        },
+        "OwnerPhoneArea": {
+          "type": "string"
+        },
+        "OwnerPhoneNumber": {
+          "type": "string"
+        },
+        "PendingDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "PhoneToShowArea": {
+          "type": "string"
+        },
+        "PhoneToShowNumber": {
+          "type": "string"
+        },
+        "PictureCount": {
+          "type": "string"
+        },
+        "PictureModifiedDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "PictureProvidedBy": {
+          "type": "string"
+        },
+        "PossibleBedrooms": {
+          "type": "string"
+        },
+        "PriceChangeDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "PricePerAcre": {
+          "type": "string"
+        },
+        "PricePerSquareFoot": {
+          "type": "string"
+        },
+        "PropertyDisclaimer": {
+          "type": "string"
+        },
+        "PropertySubtype1": {
+          "type": "string"
+        },
+        "PropertySubtype2": {
+          "type": "string"
+        },
+        "PropertySubtype3": {
+          "type": "string"
+        },
+        "PropertyType": {
+          "type": "string"
+        },
+        "PublicHitCounter": {
+          "type": "string"
+        },
+        "PublishToInternet": {
+          "type": "string"
+        },
+        "QuarterBathrooms": {
+          "type": "string"
+        },
+        "RESIAINT": {
+          "type": "string"
+        },
+        "RESIALTD": {
+          "type": "string"
+        },
+        "RESIAMPH": {
+          "type": "string"
+        },
+        "RESIAMPL": {
+          "type": "string"
+        },
+        "RESIBATH": {
+          "type": "string"
+        },
+        "RESIBLDR": {
+          "type": "string"
+        },
+        "RESIBRGR": {
+          "type": "string"
+        },
+        "RESIBTHI": {
+          "type": "string"
+        },
+        "RESIBULD": {
+          "type": "string"
+        },
+        "RESICDEV": {
+          "type": "string"
+        },
+        "RESICOMR": {
+          "type": "string"
+        },
+        "RESICONC": {
+          "type": "string"
+        },
+        "RESICONS": {
+          "type": "string"
+        },
+        "RESICONT": {
+          "type": "string"
+        },
+        "RESICRTC": {
+          "type": "string"
+        },
+        "RESICTTA": {
+          "type": "string"
+        },
+        "RESICTYT": {
+          "type": "string"
+        },
+        "RESIDATA": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "RESIDENB": {
+          "type": "string"
+        },
+        "RESIDINE": {
+          "type": "string"
+        },
+        "RESIDIST": {
+          "type": "string"
+        },
+        "RESIDNGR": {
+          "type": "string"
+        },
+        "RESIDOCU": {
+          "type": "string"
+        },
+        "RESIDRAI": {
+          "type": "string"
+        },
+        "RESIDRIV": {
+          "type": "string"
+        },
+        "RESIDRVW": {
+          "type": "string"
+        },
+        "RESIEDRS": {
+          "type": "string"
+        },
+        "RESIEFMS": {
+          "type": "string"
+        },
+        "RESIEKTS": {
+          "type": "string"
+        },
+        "RESIELEM": {
+          "type": "string"
+        },
+        "RESIELVS": {
+          "type": "string"
+        },
+        "RESIEMBS": {
+          "type": "string"
+        },
+        "RESIENGR": {
+          "type": "string"
+        },
+        "RESIENGY": {
+          "type": "string"
+        },
+        "RESIEXTR": {
+          "type": "string"
+        },
+        "RESIFAMR": {
+          "type": "string"
+        },
+        "RESIFEEI": {
+          "type": "string"
+        },
+        "RESIFENC": {
+          "type": "string"
+        },
+        "RESIFINA": {
+          "type": "string"
+        },
+        "RESIFIRE": {
+          "type": "string"
+        },
+        "RESIFIRP": {
+          "type": "string"
+        },
+        "RESIFLOR": {
+          "type": "string"
+        },
+        "RESIFLRS": {
+          "type": "string"
+        },
+        "RESIFNCT": {
+          "type": "string"
+        },
+        "RESIFOUN": {
+          "type": "string"
+        },
+        "RESIFRFU": {
+          "type": "string"
+        },
+        "RESIFRPL": {
+          "type": "string"
+        },
+        "RESIFURN": {
+          "type": "string"
+        },
+        "RESIGRBW": {
+          "type": "string"
+        },
+        "RESIGRRT": {
+          "type": "string"
+        },
+        "RESIGRSP": {
+          "type": "string"
+        },
+        "RESIHGTL": {
+          "type": "string"
+        },
+        "RESIHIGH": {
+          "type": "string"
+        },
+        "RESIHMPP": {
+          "type": "string"
+        },
+        "RESIHMPR": {
+          "type": "string"
+        },
+        "RESIHOA": {
+          "type": "string"
+        },
+        "RESIHOAA": {
+          "type": "string"
+        },
+        "RESIHOAD": {
+          "type": "string"
+        },
+        "RESIHOAI": {
+          "type": "string"
+        },
+        "RESIHOAN": {
+          "type": "string"
+        },
+        "RESIHOAP": {
+          "type": "string"
+        },
+        "RESIHOPN": {
+          "type": "string"
+        },
+        "RESIHPHN": {
+          "type": "string"
+        },
+        "RESIHTCL": {
+          "type": "string"
+        },
+        "RESIHTCO": {
+          "type": "string"
+        },
+        "RESIIRRI": {
+          "type": "string"
+        },
+        "RESIJRMD": {
+          "type": "string"
+        },
+        "RESIKITN": {
+          "type": "string"
+        },
+        "RESIKSHS": {
+          "type": "string"
+        },
+        "RESIKTCH": {
+          "type": "string"
+        },
+        "RESILAUN": {
+          "type": "string"
+        },
+        "RESILBLO": {
+          "type": "string"
+        },
+        "RESILDES": {
+          "type": "string"
+        },
+        "RESILIVR": {
+          "type": "string"
+        },
+        "RESILLVL": {
+          "type": "string"
+        },
+        "RESILMPH": {
+          "type": "string"
+        },
+        "RESILMPL": {
+          "type": "string"
+        },
+        "RESILNDA": {
+          "type": "string"
+        },
+        "RESILOCA": {
+          "type": "string"
+        },
+        "RESILOCU": {
+          "type": "string"
+        },
+        "RESILOWL": {
+          "type": "string"
+        },
+        "RESILSPF": {
+          "type": "string"
+        },
+        "RESILTDS": {
+          "type": "string"
+        },
+        "RESILVGR": {
+          "type": "string"
+        },
+        "RESIMAIN": {
+          "type": "string"
+        },
+        "RESIMAXL": {
+          "type": "string"
+        },
+        "RESIMDLO": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "RESIMINL": {
+          "type": "string"
+        },
+        "RESIMISC": {
+          "type": "string"
+        },
+        "RESIMLVL": {
+          "type": "string"
+        },
+        "RESIMODL": {
+          "type": "string"
+        },
+        "RESIMTHR": {
+          "type": "string"
+        },
+        "RESINEWC": {
+          "type": "string"
+        },
+        "RESINMDL": {
+          "type": "string"
+        },
+        "RESINOPS": {
+          "type": "string"
+        },
+        "RESINRMS": {
+          "type": "string"
+        },
+        "RESIOCCN": {
+          "type": "string"
+        },
+        "RESIOCUP": {
+          "type": "string"
+        },
+        "RESIONMK": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "RESIORMS": {
+          "type": "string"
+        },
+        "RESIOSSP": {
+          "type": "string"
+        },
+        "RESIOTHS": {
+          "type": "string"
+        },
+        "RESIOTRR": {
+          "type": "string"
+        },
+        "RESIOWBS": {
+          "type": "string"
+        },
+        "RESIOWNN": {
+          "type": "string"
+        },
+        "RESIOWNP": {
+          "type": "string"
+        },
+        "RESIPAAC": {
+          "type": "string"
+        },
+        "RESIPAID": {
+          "type": "string"
+        },
+        "RESIPEND": {
+          "type": "string"
+        },
+        "RESIPHON": {
+          "type": "string"
+        },
+        "RESIPKGR": {
+          "type": "string"
+        },
+        "RESIPLAN": {
+          "type": "string"
+        },
+        "RESIPLYN": {
+          "type": "string"
+        },
+        "RESIPMCO": {
+          "type": "string"
+        },
+        "RESIPMPH": {
+          "type": "string"
+        },
+        "RESIPNDL": {
+          "type": "string"
+        },
+        "RESIPOOL": {
+          "type": "string"
+        },
+        "RESIPOSS": {
+          "type": "string"
+        },
+        "RESIPRBS": {
+          "type": "string"
+        },
+        "RESIPRKG": {
+          "type": "string"
+        },
+        "RESIPRKL": {
+          "type": "string"
+        },
+        "RESIPROB": {
+          "type": "string"
+        },
+        "RESIRECR": {
+          "type": "string"
+        },
+        "RESIREOO": {
+          "type": "string"
+        },
+        "RESIRNTF": {
+          "type": "string"
+        },
+        "RESIRNTP": {
+          "type": "string"
+        },
+        "RESIRNTS": {
+          "type": "string"
+        },
+        "RESIROOF": {
+          "type": "string"
+        },
+        "RESIRSTR": {
+          "type": "string"
+        },
+        "RESISAFE": {
+          "type": "string"
+        },
+        "RESISALE": {
+          "type": "string"
+        },
+        "RESISBJC": {
+          "type": "string"
+        },
+        "RESISCOP": {
+          "type": "string"
+        },
+        "RESISECD": {
+          "type": "string"
+        },
+        "RESISENI": {
+          "type": "string"
+        },
+        "RESISEWS": {
+          "type": "string"
+        },
+        "RESISHOP": {
+          "type": "string"
+        },
+        "RESISHOW": {
+          "type": "string"
+        },
+        "RESISHYN": {
+          "type": "string"
+        },
+        "RESISNDU": {
+          "type": "string"
+        },
+        "RESISNUB": {
+          "type": "string"
+        },
+        "RESISOLS": {
+          "type": "string"
+        },
+        "RESISPCF": {
+          "type": "string"
+        },
+        "RESISPEC": {
+          "type": "string"
+        },
+        "RESISPET": {
+          "type": "string"
+        },
+        "RESISPEZ": {
+          "type": "string"
+        },
+        "RESISTNT": {
+          "type": "string"
+        },
+        "RESISTOR": {
+          "type": "string"
+        },
+        "RESISTYL": {
+          "type": "string"
+        },
+        "RESISUBD": {
+          "type": "string"
+        },
+        "RESISUFB": {
+          "type": "string"
+        },
+        "RESISUHB": {
+          "type": "string"
+        },
+        "RESISUKT": {
+          "type": "string"
+        },
+        "RESISUOC": {
+          "type": "string"
+        },
+        "RESISURT": {
+          "type": "string"
+        },
+        "RESISUSQ": {
+          "type": "string"
+        },
+        "RESISUTY": {
+          "type": "string"
+        },
+        "RESITICA": {
+          "type": "string"
+        },
+        "RESITICC": {
+          "type": "string"
+        },
+        "RESITRAN": {
+          "type": "string"
+        },
+        "RESITRNS": {
+          "type": "string"
+        },
+        "RESITTLR": {
+          "type": "string"
+        },
+        "RESITUIS": {
+          "type": "string"
+        },
+        "RESITYPE": {
+          "type": "string"
+        },
+        "RESIUBLT": {
+          "type": "string"
+        },
+        "RESIULVL": {
+          "type": "string"
+        },
+        "RESIUNCF": {
+          "type": "string"
+        },
+        "RESIUNIT": {
+          "type": "string"
+        },
+        "RESIUPGR": {
+          "type": "string"
+        },
+        "RESIUPRL": {
+          "type": "string"
+        },
+        "RESIUTIL": {
+          "type": "string"
+        },
+        "RESIVIEW": {
+          "type": "string"
+        },
+        "RESIWELD": {
+          "type": "string"
+        },
+        "RESIWELL": {
+          "type": "string"
+        },
+        "RESIWTRS": {
+          "type": "string"
+        },
+        "RESIWTSW": {
+          "type": "string"
+        },
+        "RESIYARD": {
+          "type": "string"
+        },
+        "RESIYEAR": {
+          "type": "string"
+        },
+        "RESIYRGR": {
+          "type": "string"
+        },
+        "RESIZONE": {
+          "type": "string"
+        },
+        "RESIZONG": {
+          "type": "string"
+        },
+        "ReciprocalListing": {
+          "type": "string"
+        },
+        "ReciprocalMemberAreaCode": {
+          "type": "string"
+        },
+        "ReciprocalMemberName": {
+          "type": "string"
+        },
+        "ReciprocalMemberPhone": {
+          "type": "string"
+        },
+        "ReciprocalOfficeName": {
+          "type": "string"
+        },
+        "Region": {
+          "type": "string"
+        },
+        "SA1_Address2": {
+          "type": "string"
+        },
+        "SA1_AddressStreet": {
+          "type": "string"
+        },
+        "SA1_AgentID": {
+          "type": "string"
+        },
+        "SA1_AgentLicenseID": {
+          "type": "string"
+        },
+        "SA1_Char100_1": {
+          "type": "string"
+        },
+        "SA1_Char10_1": {
+          "type": "string"
+        },
+        "SA1_Char10_2": {
+          "type": "string"
+        },
+        "SA1_Char10_3": {
+          "type": "string"
+        },
+        "SA1_City": {
+          "type": "string"
+        },
+        "SA1_Email": {
+          "type": "string"
+        },
+        "SA1_HiddenUsCID": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber1": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber2": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber2CountryCodeId": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber2Desc": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber2Ext": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber3": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber3CountryCodeId": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber3Desc": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber3Ext": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber4": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber4CountryCodeId": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber4Desc": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber5": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber5CountryCodeId": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber5Desc": {
+          "type": "string"
+        },
+        "SA1_PhoneNumber5Ext": {
+          "type": "string"
+        },
+        "SA1_State": {
+          "type": "string"
+        },
+        "SA1_Status": {
+          "type": "string"
+        },
+        "SA1_UserFirstName": {
+          "type": "string"
+        },
+        "SA1_UserLastName": {
+          "type": "string"
+        },
+        "SA1_UserMI": {
+          "type": "string"
+        },
+        "SA1_WebPage": {
+          "type": "string"
+        },
+        "SA1_Zip": {
+          "type": "string"
+        },
+        "SA1_users_nrds_id": {
+          "type": "string"
+        },
+        "SA2_Address2": {
+          "type": "string"
+        },
+        "SA2_AddressStreet": {
+          "type": "string"
+        },
+        "SA2_AgentLicenseID": {
+          "type": "string"
+        },
+        "SA2_City": {
+          "type": "string"
+        },
+        "SA2_Email": {
+          "type": "string"
+        },
+        "SA2_HiddenUsCID": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber1": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber2": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber2CountryCodeId": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber2Desc": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber3": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber3CountryCodeId": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber3Desc": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber4": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber4CountryCodeId": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber4Desc": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber5": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber5CountryCodeId": {
+          "type": "string"
+        },
+        "SA2_PhoneNumber5Desc": {
+          "type": "string"
+        },
+        "SA2_State": {
+          "type": "string"
+        },
+        "SA2_Status": {
+          "type": "string"
+        },
+        "SA2_UserFirstName": {
+          "type": "string"
+        },
+        "SA2_UserLastName": {
+          "type": "string"
+        },
+        "SA2_UserMI": {
+          "type": "string"
+        },
+        "SA2_WebPage": {
+          "type": "string"
+        },
+        "SA2_Zip": {
+          "type": "string"
+        },
+        "SO1_BranchOfOrgID": {
+          "type": "string"
+        },
+        "SO1_Char10_1": {
+          "type": "string"
+        },
+        "SO1_Char10_2": {
+          "type": "string"
+        },
+        "SO1_EMail": {
+          "type": "string"
+        },
+        "SO1_HiddenOrgID": {
+          "type": "string"
+        },
+        "SO1_HiddenOtyID": {
+          "type": "string"
+        },
+        "SO1_OrgAddress2": {
+          "type": "string"
+        },
+        "SO1_OrgAddressStreet": {
+          "type": "string"
+        },
+        "SO1_OrgCity": {
+          "type": "string"
+        },
+        "SO1_OrgState": {
+          "type": "string"
+        },
+        "SO1_OrgZip": {
+          "type": "string"
+        },
+        "SO1_OrganizationName": {
+          "type": "string"
+        },
+        "SO1_PhoneNumber1": {
+          "type": "string"
+        },
+        "SO1_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "SO1_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "SO1_ShortName": {
+          "type": "string"
+        },
+        "SO1_WebPage": {
+          "type": "string"
+        },
+        "SO1_board_id": {
+          "type": "string"
+        },
+        "SO2_BranchOfOrgID": {
+          "type": "string"
+        },
+        "SO2_Char10_2": {
+          "type": "string"
+        },
+        "SO2_EMail": {
+          "type": "string"
+        },
+        "SO2_HiddenOrgID": {
+          "type": "string"
+        },
+        "SO2_HiddenOtyID": {
+          "type": "string"
+        },
+        "SO2_OrgAddress2": {
+          "type": "string"
+        },
+        "SO2_OrgAddressStreet": {
+          "type": "string"
+        },
+        "SO2_OrgCity": {
+          "type": "string"
+        },
+        "SO2_OrgState": {
+          "type": "string"
+        },
+        "SO2_OrgZip": {
+          "type": "string"
+        },
+        "SO2_OrganizationName": {
+          "type": "string"
+        },
+        "SO2_PhoneNumber1": {
+          "type": "string"
+        },
+        "SO2_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "SO2_ShortName": {
+          "type": "string"
+        },
+        "SO2_WebPage": {
+          "type": "string"
+        },
+        "SO2_board_id": {
+          "type": "string"
+        },
+        "SearchContractualDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "SearchPrice": {
+          "type": "string"
+        },
+        "SellingAgentMLSID": {
+          "type": "string"
+        },
+        "SellingAgentNumber": {
+          "type": "string"
+        },
+        "SellingCoAgentMLSID": {
+          "type": "string"
+        },
+        "SellingCoAgentNumber": {
+          "type": "string"
+        },
+        "SellingCoOfficeMLSID": {
+          "type": "string"
+        },
+        "SellingCoOfficeName": {
+          "type": "string"
+        },
+        "SellingCoOfficeNumber": {
+          "type": "string"
+        },
+        "SellingComments": {
+          "type": "string"
+        },
+        "SellingDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "SellingOfficeMLSID": {
+          "type": "string"
+        },
+        "SellingOfficeName": {
+          "type": "string"
+        },
+        "SellingOfficeNumber": {
+          "type": "string"
+        },
+        "SellingPrice": {
+          "type": "string"
+        },
+        "ShowAddressToPublic": {
+          "type": "string"
+        },
+        "SquareFootage": {
+          "type": "string"
+        },
+        "SquareFootageSource": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "StatusComments": {
+          "type": "string"
+        },
+        "StatusDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "StreetAddressCode": {
+          "type": "string"
+        },
+        "StreetDirection": {
+          "type": "string"
+        },
+        "StreetName": {
+          "type": "string"
+        },
+        "StreetNumber": {
+          "type": "string"
+        },
+        "StreetNumberModifier": {
+          "type": "string"
+        },
+        "StreetPostDirection": {
+          "type": "string"
+        },
+        "StreetSuffix": {
+          "type": "string"
+        },
+        "StreetSuffixLong": {
+          "type": "string"
+        },
+        "SubLease": {
+          "type": "string"
+        },
+        "SubLeaseExpiration": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "Subdivision": {
+          "type": "string"
+        },
+        "T_list_tax_property_id": {
+          "type": "string"
+        },
+        "T_tax_db_id": {
+          "type": "string"
+        },
+        "TaxAutofill": {
+          "type": "string"
+        },
+        "TaxInfo": {
+          "type": "string"
+        },
+        "ThreeQuarterBathrooms": {
+          "type": "string"
+        },
+        "TransactionType": {
+          "type": "string"
+        },
+        "Unit": {
+          "type": "string"
+        },
+        "VOWAddressDisplay": {
+          "type": "string"
+        },
+        "VOWAutomatedValuationDisplay": {
+          "type": "string"
+        },
+        "VOWConsumerComment": {
+          "type": "string"
+        },
+        "VOWEntireListingDisplay": {
+          "type": "string"
+        },
+        "VT_VTourURL": {
+          "type": "string"
+        },
+        "Validated": {
+          "type": "string"
+        },
+        "VariableRateCommission": {
+          "type": "string"
+        },
+        "VirtualMedia": {
+          "type": "string"
+        },
+        "VirtualTourURL": {
+          "type": "string"
+        },
+        "YearBuilt": {
+          "type": "string"
+        },
+        "YearBuiltException": {
+          "type": "string"
+        },
+        "ZeroSellingPrice": {
+          "type": "string"
+        },
+        "ZipCode": {
+          "type": "string"
+        },
+        "ZipPlus4": {
+          "type": "string"
+        },
+        "_class": {
+          "type": "string"
+        },
+        "_mls": {
+          "type": "string"
+        }
+      }
+    },
+    "listingRemoved": {
+      "properties": {
+        "Approved": {
+          "type": "string"
+        },
+        "DateTimeChanged": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "LastModifiedDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "ListingRid": {
+          "type": "string"
+        },
+        "MLNumber": {
+          "type": "string"
+        },
+        "MLS": {
+          "type": "string"
+        },
+        "PublishToIDX": {
+          "type": "string"
+        },
+        "PublishToInternet": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "_modified": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_resource": {
+          "type": "string"
+        },
+        "_class": {
+          "type": "string"
+        },
+        "_mls": {
+          "type": "string"
+        }
+      }
+    },
+    "agent": {
+      "properties": {
+        "AO_BranchOfOrgID": {
+          "type": "string"
+        },
+        "AO_Char10_1": {
+          "type": "string"
+        },
+        "AO_Char10_2": {
+          "type": "string"
+        },
+        "AO_EMail": {
+          "type": "string"
+        },
+        "AO_HiddenOtyID": {
+          "type": "string"
+        },
+        "AO_OrgAddress2": {
+          "type": "string"
+        },
+        "AO_OrgAddressStreet": {
+          "type": "string"
+        },
+        "AO_OrgCity": {
+          "type": "string"
+        },
+        "AO_OrgState": {
+          "type": "string"
+        },
+        "AO_OrgZip": {
+          "type": "string"
+        },
+        "AO_OrganizationName": {
+          "type": "string"
+        },
+        "AO_PhoneNumber1": {
+          "type": "string"
+        },
+        "AO_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "AO_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "AO_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "AO_ShortName": {
+          "type": "string"
+        },
+        "AO_WebPage": {
+          "type": "string"
+        },
+        "AO_board_id": {
+          "type": "string"
+        },
+        "BirthDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "City": {
+          "type": "string"
+        },
+        "ContactAddlPhoneType1": {
+          "type": "string"
+        },
+        "ContactAddlPhoneType2": {
+          "type": "string"
+        },
+        "ContactAddlPhoneType3": {
+          "type": "string"
+        },
+        "ContactPhoneAreaCode1": {
+          "type": "string"
+        },
+        "ContactPhoneAreaCode2": {
+          "type": "string"
+        },
+        "ContactPhoneAreaCode3": {
+          "type": "string"
+        },
+        "ContactPhoneLabels": {
+          "type": "string"
+        },
+        "ContactPhoneNumber1": {
+          "type": "string"
+        },
+        "ContactPhoneNumber2": {
+          "type": "string"
+        },
+        "ContactPhoneNumber3": {
+          "type": "string"
+        },
+        "ContactPhoneType1": {
+          "type": "string"
+        },
+        "ContactPhoneType2": {
+          "type": "string"
+        },
+        "ContactPhoneType3": {
+          "type": "string"
+        },
+        "DesignationDate": {
+          "type": "string"
+        },
+        "Designations": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "FullName": {
+          "type": "string"
+        },
+        "Gender": {
+          "type": "string"
+        },
+        "Generation": {
+          "type": "string"
+        },
+        "HomePhoneAreaCode": {
+          "type": "string"
+        },
+        "HomePhoneComplete": {
+          "type": "string"
+        },
+        "HomePhoneNumber": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "string"
+        },
+        "LastModifiedDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "LicenseExpirationDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "LicenseNumber": {
+          "type": "string"
+        },
+        "LicenseType": {
+          "type": "string"
+        },
+        "MLSID": {
+          "type": "string"
+        },
+        "MemberNumber": {
+          "type": "string"
+        },
+        "MemberOfficeNumber": {
+          "type": "string"
+        },
+        "MiddleInitial": {
+          "type": "string"
+        },
+        "NRDSID": {
+          "type": "string"
+        },
+        "Nickname": {
+          "type": "string"
+        },
+        "OfficeMLSID": {
+          "type": "string"
+        },
+        "OfficeName": {
+          "type": "string"
+        },
+        "OfficeNumber": {
+          "type": "string"
+        },
+        "PersonalFaxAreaCode": {
+          "type": "string"
+        },
+        "PersonalFaxPhone": {
+          "type": "string"
+        },
+        "PersonalFaxPhoneComplete": {
+          "type": "string"
+        },
+        "PhoneExtension": {
+          "type": "string"
+        },
+        "PhoneMobile": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "StreetAddress": {
+          "type": "string"
+        },
+        "Title": {
+          "type": "string"
+        },
+        "TransferDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "UP_AgentPhone": {
+          "type": "string"
+        },
+        "U_Address2": {
+          "type": "string"
+        },
+        "U_AddressStreet": {
+          "type": "string"
+        },
+        "U_AgentID": {
+          "type": "string"
+        },
+        "U_AgentLicenseDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_AgentLicenseID": {
+          "type": "string"
+        },
+        "U_AgentTypeChangeDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_BirthDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_Char100_1": {
+          "type": "string"
+        },
+        "U_Char10_1": {
+          "type": "string"
+        },
+        "U_Char10_2": {
+          "type": "string"
+        },
+        "U_Char10_3": {
+          "type": "string"
+        },
+        "U_Char50_1": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_Char50_2": {
+          "type": "string"
+        },
+        "U_Char50_3": {
+          "type": "string"
+        },
+        "U_City": {
+          "type": "string"
+        },
+        "U_DateAssignedToOrg": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_Dist": {
+          "type": "string"
+        },
+        "U_Email": {
+          "type": "string"
+        },
+        "U_FreeFormDesig": {
+          "type": "string"
+        },
+        "U_Hash": {
+          "type": "string"
+        },
+        "U_HiddenOrgID": {
+          "type": "string"
+        },
+        "U_HiddenUsCID": {
+          "type": "string"
+        },
+        "U_Indoctrination": {
+          "type": "string"
+        },
+        "U_InputDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_LoginName": {
+          "type": "string"
+        },
+        "U_MailAddress2": {
+          "type": "string"
+        },
+        "U_MailAddressStreet": {
+          "type": "string"
+        },
+        "U_MailCity": {
+          "type": "string"
+        },
+        "U_MailState": {
+          "type": "string"
+        },
+        "U_MailZip": {
+          "type": "string"
+        },
+        "U_MultyLogin": {
+          "type": "string"
+        },
+        "U_PhoneNumber1": {
+          "type": "string"
+        },
+        "U_PhoneNumber1CountryCodeId": {
+          "type": "string"
+        },
+        "U_PhoneNumber1Desc": {
+          "type": "string"
+        },
+        "U_PhoneNumber1Ext": {
+          "type": "string"
+        },
+        "U_PhoneNumber2": {
+          "type": "string"
+        },
+        "U_PhoneNumber2CountryCodeId": {
+          "type": "string"
+        },
+        "U_PhoneNumber2Desc": {
+          "type": "string"
+        },
+        "U_PhoneNumber2Ext": {
+          "type": "string"
+        },
+        "U_PhoneNumber3": {
+          "type": "string"
+        },
+        "U_PhoneNumber3CountryCodeId": {
+          "type": "string"
+        },
+        "U_PhoneNumber3Desc": {
+          "type": "string"
+        },
+        "U_PhoneNumber3Ext": {
+          "type": "string"
+        },
+        "U_PhoneNumber4": {
+          "type": "string"
+        },
+        "U_PhoneNumber4CountryCodeId": {
+          "type": "string"
+        },
+        "U_PhoneNumber4Desc": {
+          "type": "string"
+        },
+        "U_PhoneNumber5": {
+          "type": "string"
+        },
+        "U_PhoneNumber5CountryCodeId": {
+          "type": "string"
+        },
+        "U_PhoneNumber5Desc": {
+          "type": "string"
+        },
+        "U_PhoneNumber5Ext": {
+          "type": "string"
+        },
+        "U_Photographer": {
+          "type": "string"
+        },
+        "U_Photos": {
+          "type": "string"
+        },
+        "U_PreferredMailCode": {
+          "type": "string"
+        },
+        "U_SecurityLevel": {
+          "type": "string"
+        },
+        "U_SpouseFirstName": {
+          "type": "string"
+        },
+        "U_State": {
+          "type": "string"
+        },
+        "U_StateAgentIsMemberOf": {
+          "type": "string"
+        },
+        "U_StateAgentIsMemberOfDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_Status": {
+          "type": "string"
+        },
+        "U_StatusDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_UpdateAgent": {
+          "type": "string"
+        },
+        "U_UpdateDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "U_UserCode": {
+          "type": "string"
+        },
+        "U_UserFirstName": {
+          "type": "string"
+        },
+        "U_UserLastName": {
+          "type": "string"
+        },
+        "U_UserMI": {
+          "type": "string"
+        },
+        "U_UserSalutation": {
+          "type": "string"
+        },
+        "U_WebPage": {
+          "type": "string"
+        },
+        "U_Zip": {
+          "type": "string"
+        },
+        "U_user_is_active": {
+          "type": "string"
+        },
+        "U_users_nrds_id": {
+          "type": "string"
+        },
+        "WebPageAddress": {
+          "type": "string"
+        },
+        "ZipCode": {
+          "type": "string"
+        },
+        "ZipPlus4": {
+          "type": "string"
+        },
+        "_class": {
+          "type": "string"
+        },
+        "_mls": {
+          "type": "string"
+        }
+      }
+    },
+    "openhome": {
+      "properties": {
+        "AgentCity": {
+          "type": "string"
+        },
+        "AgentEmailAddress": {
+          "type": "string"
+        },
+        "AgentFirstName": {
+          "type": "string"
+        },
+        "AgentHomePhone": {
+          "type": "string"
+        },
+        "AgentLastName": {
+          "type": "string"
+        },
+        "AgentMLSID": {
+          "type": "string"
+        },
+        "AgentNRDSID": {
+          "type": "string"
+        },
+        "AgentPersonalFaxPhone": {
+          "type": "string"
+        },
+        "AgentState": {
+          "type": "string"
+        },
+        "AgentStreetAddress": {
+          "type": "string"
+        },
+        "AgentWebPageAddress": {
+          "type": "string"
+        },
+        "AgentZipCode": {
+          "type": "string"
+        },
+        "Comment": {
+          "type": "string"
+        },
+        "EndDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "Hosted": {
+          "type": "string"
+        },
+        "LastModifiedDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "ListingRid": {
+          "type": "string"
+        },
+        "MLNumber": {
+          "type": "string"
+        },
+        "OfficeEmailAddress": {
+          "type": "string"
+        },
+        "OfficeFaxPhone": {
+          "type": "string"
+        },
+        "OfficeMLSID": {
+          "type": "string"
+        },
+        "OfficeNRDSID": {
+          "type": "string"
+        },
+        "OfficeName": {
+          "type": "string"
+        },
+        "OfficePhone": {
+          "type": "string"
+        },
+        "OfficeStreetAddress": {
+          "type": "string"
+        },
+        "OfficeStreetCarrierRouteCode": {
+          "type": "string"
+        },
+        "OfficeStreetCity": {
+          "type": "string"
+        },
+        "OfficeStreetState": {
+          "type": "string"
+        },
+        "OfficeStreetZipCode": {
+          "type": "string"
+        },
+        "OfficeWebPageAddress": {
+          "type": "string"
+        },
+        "OpenHouseRid": {
+          "type": "string"
+        },
+        "StartDateTime": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_class": {
+          "type": "string"
+        },
+        "_mls": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

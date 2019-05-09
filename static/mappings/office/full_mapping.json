@@ -1,0 +1,239 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "nGram_filter": {
+          "token_chars": [
+            "letter",
+            "digit",
+            "punctuation",
+            "symbol"
+          ],
+          "min_gram": "1",
+          "type": "nGram",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "nGram_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "nGram_filter"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        },
+        "whitespace_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "office": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "_class": {
+          "type": "string"
+        },
+        "_created": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_flag": {
+          "properties": {
+            "0": {
+              "type": "string"
+            }
+          }
+        },
+        "_mls": {
+          "type": "string"
+        },
+        "_modified": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_normalized": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "_pid": {
+          "type": "string"
+        },
+        "address": {
+          "properties": {
+            "addressStreet": {
+              "type": "string"
+            },
+            "addressStreet2": {
+              "type": "string"
+            },
+            "careOf": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "fullStreetAddress": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            },
+            "zip4": {
+              "type": "string"
+            }
+          }
+        },
+        "boardID": {
+          "type": "string"
+        },
+        "branchNum": {
+          "type": "string"
+        },
+        "branchType": {
+          "type": "string"
+        },
+        "brokerInfo": {
+          "properties": {
+            "brokerAgentId": {
+              "type": "string"
+            },
+            "brokerCode": {
+              "type": "string"
+            },
+            "brokerLicenseNum": {
+              "type": "string"
+            },
+            "brokerNrds": {
+              "type": "string"
+            },
+            "contactMember": {
+              "type": "string"
+            },
+            "designatedBroker": {
+              "type": "string"
+            },
+            "franchiseNrds": {
+              "type": "string"
+            },
+            "numBranches": {
+              "type": "string"
+            }
+          }
+        },
+        "contact": {
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "fax": {
+              "type": "string"
+            },
+            "otherPhone": {
+              "type": "string"
+            },
+            "primaryPhone": {
+              "type": "string"
+            },
+            "primaryPhoneExt": {
+              "type": "string"
+            },
+            "website": {
+              "type": "string"
+            }
+          }
+        },
+        "idxOpt": {
+          "type": "boolean"
+        },
+        "mailingAddress": {
+          "properties": {
+            "addressStreet": {
+              "type": "string"
+            },
+            "addressStreet2": {
+              "type": "string"
+            },
+            "careOf": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "fullStreetAddress": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            },
+            "zip4": {
+              "type": "string"
+            }
+          }
+        },
+        "mainOfficeId": {
+          "type": "string"
+        },
+        "masterOfficeId": {
+          "type": "string"
+        },
+        "nrdsid": {
+          "type": "string"
+        },
+        "officeActive": {
+          "type": "boolean"
+        },
+        "officeLongName": {
+          "type": "string"
+        },
+        "officeMLSID": {
+          "type": "string"
+        },
+        "officeName": {
+          "type": "string"
+        },
+        "officeNumber": {
+          "type": "string"
+        },
+        "officeType": {
+          "type": "string"
+        },
+        "vow": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "nGram_filter": {
+          "token_chars": [
+            "letter",
+            "digit",
+            "punctuation",
+            "symbol"
+          ],
+          "min_gram": "1",
+          "type": "nGram",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "nGram_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "nGram_filter"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        },
+        "whitespace_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "whitespace"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "period": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "_agentId": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": true
+        },
+        "freeQuantity": {
+          "type": "long",
+          "include_in_all": true
+        },
+        "cost": {
+          "type": "double",
+          "include_in_all": true
+        },
+        "startDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis",
+          "include_in_all": true
+        },
+        "endDate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis",
+          "include_in_all": false
+        }
+      }
+    },
+    "payment": {
+      "include_in_all": false,
+      "_all": {
+        "enabled": true,
+        "analyzer": "nGram_analyzer",
+        "search_analyzer": "whitespace_analyzer"
+      },
+      "dynamic_templates": [
+        {
+          "notanalyzed": {
+            "mapping": {
+              "index": "not_analyzed",
+              "type": "string"
+            },
+            "match": "*",
+            "match_mapping_type": "string",
+            "unmatch": "*description*"
+          }
+        }
+      ],
+      "properties": {
+        "_agentId": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": true
+        },
+        "_stripeId": {
+          "type": "string",
+          "index": "not_analyzed",
+          "include_in_all": true
+        },
+        "date": {
+          "type": "date",
+          "format": "yyyy-MM-dd",
+          "include_in_all": true
+        }
+      }
+    }
+  }
+}
