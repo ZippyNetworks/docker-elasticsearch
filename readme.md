@@ -20,4 +20,4 @@ ES_ADDRESS={ELASTICSEARCH_HOST} bash bin/install.sh
 
 # Support
 
-Do you have any questions. Please, visit https://boxmls.github.io/support for consulting and help.
+Do you have any questions. Please, visit [Support](https://boxmls.github.io/support) page for consulting and help.
