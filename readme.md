@@ -21,3 +21,12 @@ ES_ADDRESS={ELASTICSEARCH_HOST} bash bin/install.sh
 # Support
 
 Do you have any questions. Please, visit [Support](https://boxmls.github.io/support) page for consulting and help.
+
+
+```
+docker build . --tag=boxmls/elasticsearch:2.4.6
+```
+
+```
+docker run -it --rm boxmls/elasticsearch:2.4.6 bash
+```
