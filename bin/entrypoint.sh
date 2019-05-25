@@ -27,7 +27,8 @@ fi
 # for example a `bash` shell to explore this image
 
 
-#elasticsearch
+
+#elasticsearch -d
 
 
 exec "$@"
