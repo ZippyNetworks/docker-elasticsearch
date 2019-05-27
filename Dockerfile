@@ -16,9 +16,12 @@ ADD           bin/install.sh /home/elasticsearch/install.sh
 ADD           static/mappings /usr/share/elasticsearch/mappings
 ADD           static/config /usr/share/elasticsearch/config
 
+RUN           mkdir -p /usr/share/elasticsearch/logs/
+RUN           touch /usr/share/elasticsearch/logs/log.txt
+RUN           chown -R elasticsearch:elasticsearch  /usr/share/elasticsearch/logs/
+
 USER          elasticsearch
 
 ENTRYPOINT    ["bash", "/home/elasticsearch/entrypoint.sh"]
 
-
-CMD           ["tail", "-f", "/usr/share/elasticsearch/logs/log.txt"]
+CMD           elasticsearch
